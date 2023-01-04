@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Noto+Sans+TC:wght@500;700;900&display=swap');
 *{
   box-sizing: border-box;
   position: relative;
 }
 body {
-  font-size: 20px;
   margin: 0;
   padding: 0;
 
@@ -21,6 +21,28 @@ body {
   align-items: center;
 }
 :root{
-  --chinese-font: "微軟正黑體", "思源黑體", "Roboto", sans-serif;
+  --chinese-font: "Noto Sans TC", "微軟正黑體", "黑體-繁",sans-serif;
   --number-font: "Comic Sans MS";
+}
+
+/* RWD 設定區 */
+@media only screen and (max-width: 1200px){
+  .wrapper{ 
+    width: 90vw;
+    padding: 75px 0;
+  }
+}
+@media only screen and (max-width: 1024px){
+}
+@media only screen and (max-width: 768px){
+  .wrapper{
+    padding: 30px 0;
+
+    flex-direction: column-reverse;
+  }
+}
+@media only screen and (max-width: 480px){
+  .wrapper{
+    padding: 15px 0;
+  }
 }
