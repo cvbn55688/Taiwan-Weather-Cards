@@ -5,23 +5,22 @@
 body {
   font-size: 20px;
   margin: 0;
-  padding: 0;  
-}
-.background{
+  padding: 0;
+
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #659fe0;
 }
 .wrapper{
   width: 1200px;
-  height: 100vh;
   margin: 0 auto;
+  padding: 150px 0;
   
   display: flex;
   justify-content: center;
   align-items: center;
 }
 :root{
-  --chinese-font: "DFKai-SB";
+  --chinese-font: "微軟正黑體", "思源黑體", "Roboto", sans-serif;
   --number-font: "Comic Sans MS";
 }
