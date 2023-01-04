@@ -19,9 +19,9 @@ if (day < 10) {
 if (nextDay < 10) {
   nextDay = "0" + nextDay;
 }
+let nowDate = year + "-" + month + "-" + day;
 
 function getWeatherNowData() {
-  // let weatherDataNowUrl = `https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=${key}`;
   return fetch(weatherDataNowUrl, {
     method: "GET",
   })
@@ -97,7 +97,6 @@ function getWeatherData36hr() {
           let startTime = location.weatherElement[0].time[i].startTime;
           let endTime = location.weatherElement[0].time[i].endTime;
           let timeDescribe = "";
-          // console.log(startTime.substr(11) == "06:00:00");
           if (
             (i == 0 && startTime.substr(11) == "06:00:00") ||
             (i == 0 && startTime.substr(11) == "12:00:00")
@@ -109,15 +108,15 @@ function getWeatherData36hr() {
             timeDescribe = "今日凌晨";
           } else if (i == 1 && startTime.substr(11) == "18:00:00") {
             timeDescribe = "今晚明晨";
-          } else if ((i == 1 && hour >= 21) || (i == 1 && hour == 0)) {
+          } else if (i == 1 && startTime.substr(0, 10) != nowDate) {
             timeDescribe = "明日白天";
-          } else if (i == 1 && hour >= 1) {
+          } else if (i == 1 && startTime.substr(0, 10) == nowDate) {
             timeDescribe = "今日白天";
           } else if (i == 2 && startTime.substr(11) == "06:00:00") {
             timeDescribe = "明日白天";
-          } else if ((i == 2 && hour >= 21) || (i == 2 && hour == 0)) {
+          } else if (i == 2 && startTime.substr(0, 10) != nowDate) {
             timeDescribe = "明日晚上";
-          } else if (i == 2 && hour >= 1) {
+          } else {
             timeDescribe = "今日晚上";
           }
           let data = {
@@ -183,7 +182,6 @@ function getWeekData() {
             location.weatherElement[8].time[i].elementValue[0].value + "度C";
           let startTime = location.weatherElement[0].time[i].startTime;
           let endTime = location.weatherElement[0].time[i].endTime;
-          // console.log(whatDay, startTime);
           let data = {
             [whatDay]: {
               Wx: { describe: locationWx, value: locationWxCode },
@@ -237,7 +235,6 @@ function getSunData() {
             data: { sunriseTime: sunriseTime, sunsetTime: sunsetTime },
           },
         };
-        // sunTimeData.push(data);
         sunTimeData = Object.assign({}, sunTimeData, data);
       });
       return sunTimeData;
