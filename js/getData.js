@@ -175,7 +175,7 @@ function getWeekData() {
       }
       locations.forEach((location) => {
         let locationData = {};
-        console.log(location);
+        // console.log(location);
         let locationName = location.locationName;
 
         count.forEach((i) => {
@@ -265,33 +265,5 @@ async function getData() {
       一週預報: weekData,
     },
   };
-  console.log(allWeatherData);
   return allWeatherData;
-}
-getData();
-
-navigator.geolocation.getCurrentPosition(successCallback);
-function successCallback(position) {
-  var msg = "";
-  // for (var prop in position.coords) {
-  //   msg += prop + ":" + position.coords[prop] + "\n";
-  //   console.log(position.coords[prop]);
-  // }
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-
-  fetch(
-    "https://api.nlsc.gov.tw/other/TownVillagePointQuery/120.634413/24.153282/4326",
-    {
-      method: "GET",
-    }
-  )
-    .then(function (response) {
-      // console.log(response);
-      return response;
-    })
-    .then(function (data) {
-      console.log(data);
-    });
-  console.log(latitude, longitude);
 }
