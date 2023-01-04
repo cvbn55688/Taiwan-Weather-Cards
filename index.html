@@ -20,33 +20,54 @@
       <!-- WEATHER CARDS -->
       <div class="card_container">
         <!-- 今日天氣狀況 -->
-        <div class="container today_container" id="today">
-          <!-- 城市、日期、今日天氣圖 -->
-          <div class="today_box">
-            <div class="today_location_box">
-              <h1 class="today_city" id="city"></h1>
-              <p class="today_date" id="date"></p>
-            </div>
-            <img class="today_image" alt="" />
+        <div class="today_container" id="today">
+          <!-- 城市、日期 -->
+          <h1 class="today_city" id="city"></h1>
+          <div class="today_calendar_box">
+            <img class="today_calendar" src="image/calendar.png" alt="">
+            <span class="today_date" id="date"></span>
           </div>
 
-          <!-- 天氣狀況、溫度、風速、降雨機率 -->
-          <div class="today_weather_box">
-            <div class="today_weather" id="today_weather"></div>
+          <!-- 天氣圖、天氣狀況 -->
+          <div class="today_box">
+            <div class="today_weather_box">
+              <img class="today_image" alt="" />
+              <div class="today_weather" id="today_weather"></div>
+            </div>
 
+            <!-- 溫度、風速、降雨機率 -->
             <div class="today_detail_box">
-              <span class="today_temperature" id="today_temperature"></span>
-              <div class="wind_rain_box">
-                <div class="today_wind_box">
-                  <img class="today_icon" src="image/wind.png" alt="" />
-                  <span class="today_wind" id="today_wind"></span>
-                </div>
-                <div class="today_rain_box">
-                  <img class="today_icon" src="image/umbrella.png" alt="" />
-                  <span class="today_rain" id="today_rain"></span>
-                </div>
+              <div class="today_temperature_box middle_box">
+                <img class="today_icon" src="image/temperature.png" alt="" 
+                /><span class="detail_content">溫度：</span>
+                <span class="today_temperature" id="today_temperature"></span>
+              </div>
+
+              <div class="today_wind_box middle_box">
+                <img class="today_icon" src="image/wind.png" alt="" 
+                /><span class="detail_content">風速：</span>
+                <span class="today_wind" id="today_wind"></span>
+              </div>
+
+              <div class="today_rain_box middle_box">
+                <img class="today_icon" src="image/umbrella.png" alt="" 
+                /><span class="detail_content">降雨機率：</span>
+                <span class="today_rain" id="today_rain"></span>
+              </div>
+            
+              <div class="sun_box middle_box">
+                <img class="today_icon" src="image/sunrise.png" alt="" 
+                /><span class="detail_content">日出時間：</span>
+                <span class="sunrise_time">05:55</span>
+              </div>
+
+              <div class="sun_box middle_box">
+                <img class="today_icon" src="image/sunset.png" alt=""
+                 /><span class="detail_content">日落時間：</span>
+                <span class="sunset_time">17:56</span>
               </div>
             </div>
+
           </div>
         </div>
         <!-- // 今日天氣狀況 -->
@@ -54,7 +75,7 @@
         <!-- 36小時天氣狀況 -->
         <div class="container thirty_six_hours_container" id="thirty_six_hours">
           <!-- 第一個12小時氣象 -->
-          <div class="hours_box first_box">
+          <div class="hours_box" id="first_box">
             <div class="hours_title" id="first_title"></div>
             <div class="hours_bottom_box">
                <img class="hours_image" id="first_image" alt="" />
@@ -73,7 +94,7 @@
           </div>
 
           <!-- 第二個12小時氣象 -->
-          <div class="hours_box second_box">
+          <div class="hours_box" id="second_box">
             <div class="hours_title" id="second_title"></div>
             <div class="hours_bottom_box">
                <img class="hours_image" id="second_image" alt="" />
@@ -92,7 +113,7 @@
           </div>
 
           <!-- 第三個12小時氣象 -->
-          <div class="hours_box third_box">
+          <div class="hours_box" id="third_box">
             <div class="hours_title" id="third_title"></div>
             <div class="hours_bottom_box">
                <img class="hours_image" id="third_image" alt="" />
@@ -112,26 +133,8 @@
         </div>
         <!-- // 36小時天氣狀況 -->
 
-        <!-- 日出日落 -->
-        <div class="container" id="sun">
-          <div class="sun_box">
-            <img class="sun_image" src="image/sunrise.png" alt="" />
-            <div class="sun_content">
-              日出時間 <span class="sunrise_time"></span>
-            </div>
-          </div>
-
-          <div class="sun_box">
-            <img class="sun_image" src="image/sunset.png" alt="" />
-            <div class="sun_content">
-              日落時間 <span class="sunset_time"></span>
-            </div>
-          </div>
-        </div>
-        <!-- // 日出日落 -->
-
         <!-- 一周天氣狀況 -->
-        <div class="container week_container" id="week">
+        <!-- <div class="container week_container" id="week">
           <div class="week_box day_1" id="day_1">
             <div class="week_title"></div>
             <img class="week_image" alt="">
@@ -201,7 +204,7 @@
               <span class="week_wind" id="week_wind_7"></span>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- // 一周天氣狀況 -->
       </div>
       <!-- // WEATHER CARDS -->
