@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="css/card.css" />
     <!-- 台灣地圖樣式 -->
     <link rel="stylesheet" type="text/css" href="css/taiwan-map.css" />
+    <!-- 縣市name tag樣式 -->
+    <link rel="stylesheet" type="text/css" href="css/nametag.css" />
   </head>
 
   <body>
@@ -224,6 +226,74 @@
       <!-- 如需設定點擊事件，請參考g tag的id與class -->
       <div class="taiwan_container" style="width: 60%">
         <div class="taiwan_map">
+          <div class="nametag">
+            <div class="nametag_box keelung_city_nametag" style="display: none;">
+              <span class="city_nametag">基隆市</span>
+            </div>
+            <div class="nametag_box new_taipei_city_nametag" style="display: none;">
+              <span class="city_nametag">新北市</span>
+            </div>
+            <div class="nametag_box taipei_city_nametag" style="display: none;">
+              <span class="city_nametag">臺北市</span>
+            </div>
+            <div class="nametag_box taoyuan_city_nametag" style="display: none;">
+              <span class="city_nametag">桃園市</span>
+            </div>
+            <div class="nametag_box hsinchu_county_nametag" style="display: none;">
+              <span class="city_nametag">新竹縣</span>
+            </div>
+            <div class="nametag_box hsinchu_city_nametag" style="display: none;">
+              <span class="city_nametag">新竹市</span>
+            </div>
+            <div class="nametag_box miaoli_county_nametag" style="display: none;">
+              <span class="city_nametag">苗栗縣</span>
+            </div>
+            <div class="nametag_box taichung_city_nametag" style="display: none;">
+              <span class="city_nametag">臺中市</span>
+            </div>
+            <div class="nametag_box nantou_county_nametag" style="display: none;">
+              <span class="city_nametag">南投縣</span>
+            </div>
+            <div class="nametag_box changhua_county_nametag" style="display: none;">
+              <span class="city_nametag">彰化縣</span>
+            </div>
+            <div class="nametag_box yunlin_county_nametag" style="display: none;">
+              <span class="city_nametag">雲林縣</span>
+            </div>
+            <div class="nametag_box chiayi_county_nametag" style="display: none;">
+              <span class="city_nametag">嘉義縣</span>
+            </div>
+            <div class="nametag_box chiayi_city_nametag" style="display: none;">
+              <span class="city_nametag">嘉義市</span>
+            </div>
+            <div class="nametag_box tainan_city_nametag" style="display: none;">
+              <span class="city_nametag">臺南市</span>
+            </div>
+            <div class="nametag_box kaohsiung_city_nametag" style="display: none;">
+              <span class="city_nametag">高雄市</span>
+            </div>
+            <div class="nametag_box pingtung_county_nametag" style="display: none;">
+              <span class="city_nametag">屏東縣</span>
+            </div>
+            <div class="nametag_box taitung_county_nametag" style="display: none;">
+              <span class="city_nametag">臺東縣</span>
+            </div>
+            <div class="nametag_box hualien_county_nametag" style="display: none;">
+              <span class="city_nametag">花蓮縣</span>
+            </div>
+            <div class="nametag_box yilan_county_nametag" style="display: none;">
+              <span class="city_nametag">宜蘭縣</span>
+            </div>
+            <div class="nametag_box penghu_county_nametag" style="display: none;">
+              <span class="city_nametag">澎湖縣</span>
+            </div>
+            <div class="nametag_box kinmen_county_nametag" style="display: none;">
+              <span class="city_nametag">金門縣</span>
+            </div>
+            <div class="nametag_box lianjiang_county_nametag" style="display: none;">
+              <span class="city_nametag">連江縣</span>
+            </div>
+          </div>
           <div id="default_map" class="map_theme">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -659,6 +729,7 @@
 
     <script src="js/getData.js"></script>
     <script src="js/eventControl.js"></script>
+    <script src="js/taiwanMap.js" defer></script>
   </body>
 </html>
 

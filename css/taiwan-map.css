@@ -1,9 +1,14 @@
 a{
     background-color: transparent
 }
+a:link{ text-decoration: none; }
+a:visited{ text-decoration: none; }
+a:hover{ text-decoration: none; }
+a:active{ text-decoration: none; }
+
+/* 台灣地圖 */
 .taiwan_map{
-    position:relative;
-    z-index:99;
+    position: relative;
     height: 100%;
 
     display: -webkit-box;
