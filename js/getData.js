@@ -242,7 +242,7 @@ function getSunData() {
     });
 }
 
-async function test() {
+async function getData() {
   let locationDataNow = await getWeatherNowData();
   let locationData36hr = await getWeatherData36hr();
   let sunTimeData = await getSunData();
@@ -253,4 +253,4 @@ async function test() {
   console.log(weekData);
 }
 
-test();
+getData();
