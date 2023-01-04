@@ -14,30 +14,31 @@
 /* --- 今日天氣狀況 ----------------------------------------------------- */
 
 /* 左半邊 - 城市、日期、天氣圖 */
-.today_container{
-    margin-top: 10px;
-}
+/* .today_container{ margin-top: 10px;} */
 .today_box{ width: 50%;}
 .today_location_box{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .today_location_box > .today_city{
     font-size: 50px;
     margin: 0;
-    line-height: 50px;
+    font-weight: 900;
     font-family: var(--chinese-font);
 }
 .today_location_box > .today_date{
     margin: 0;
-    font-size: 30px;
-    line-height: 50px;
+    width: 65px;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 57.5px;
     font-family: var(--number-font);
+    left: 15px;
 }
 .today_box > .today_image{
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 100px;
 
     left: 50%;
     transform: translate(-50%);
@@ -47,29 +48,29 @@
 .today_weather_box{ width: 50%;}
 .today_weather_box > .today_weather{
     font-size: 35px;
-    text-align: center;
-    font-weight: 800;
+    font-weight: 700;
+    text-align: end;
     color: #5f5f5f;
-    padding: 10px;
+    padding-top: 10px;
     font-family: var(--chinese-font);
 }
 .today_detail_box{
     display:flex;
     justify-content: center;
     align-items: center;
-    top: 15px;
+    top: 30px;
+    color: #5f5f5f;
 }
 .today_detail_box > .today_temperature{
     width: 40%;
-    font-size: 48px;
+    font-size: 45px;
     font-weight: 700;
     font-family: var(--number-font);
-    right: 15px;
-    top: -5px;
+    right: 10px;
 }
 .today_icon{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 }
 .today_rain_box{ padding-top: 15px;}
 .today_wind_box, .today_rain_box{
@@ -87,16 +88,15 @@
 .thirty_six_hours_container{
     justify-content: space-between;
     color: #fff;
-    padding: 10px 0;
+    padding: 0;
 }
 .hours_box{
     width: 32%;
-    background-color: #4070ad;
     border-radius: 8px;
-    padding: 10px 5px;
+    padding: 8px;
 }
 .first_box{
-    background: linear-gradient(-45deg, #cf7cab 0%, #e2c8a1 100%);
+    background: linear-gradient(-45deg, #cf83ae 0%, #e2c79e 100%);
 }
 .second_box{
     background: linear-gradient(-45deg, #7e8ed4 0%, #4345bd 100%);
@@ -107,26 +107,29 @@
 
 .hours_title{
     text-align: center;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     font-family: var(--chinese-font);
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
+.hours_bottom_box{ display: flex;}
 .hours_image{
-    width: 50%;
-    height: fit-content;
-
-    left: 50%;
-    transform: translate(-50%);
+    width: 50px;
+    height: 50px;
+    top: 4px;
 }
 /* 溫度、降雨 */
-.hours_detail_box{ text-align: center;}
+.hours_detail_box{
+    width: 60%;
+    text-align: center;
+}
 .hours_temperature{
     font-size: 22px;
     font-weight: 600;
     font-family: var(--number-font);
+    left: 5px;
 }
-.hours_rain_box{ padding-top: 5px;}
+.hours_rain_box{ padding-top: 3px;}
 .hours_icon{
     width: 24px;
     height: 24px;
@@ -143,17 +146,21 @@
     width: 50%;
     text-align: center;
     padding: 10px;
+    padding-bottom: 0;
 }
 .sun_image{
     width: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .sun_content{
     font-size: 25px;
-    font-weight: 550;
+    font-weight: 500;
+    color: #5f5f5f;
     font-family: var(--chinese-font);
 }
 .sunrise_time, .sunset_time{
+    font-weight: 600;
+    color: #000;
     font-family: var(--number-font);
 }
 
@@ -163,7 +170,7 @@
     grid-template-columns: repeat(7, 1fr);
     column-gap: 1.2px;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .week_box{
     background-color: #b1b1b1;
@@ -173,18 +180,20 @@
 }
 .week_title{
     font-size: 24px;
-    padding: 8px 0;
+    padding: 5px 0;
     font-family: var(--number-font);
 }
-.week_image{ width: 80%;}
+.week_image{
+    width: 70%;
+    height: 45px;
+}
 .week_temperature{
-    font-size: 25px;
-    font-weight: bolder;
+    font-size: 20px;
+    font-weight: 500;
     font-family: var(--number-font);
 }
 .week_wind_box{ 
-    margin: 8px 0;
-    margin-top: 10px;
+    margin-bottom: 5px;
 }
 .week_wind_box .week_icon{
     width: 24%;
