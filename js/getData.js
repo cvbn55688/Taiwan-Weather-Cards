@@ -41,6 +41,7 @@ function getWeatherNowData() {
           location.weatherElement[1].time[0].elementValue[1].value;
         let locationWS =
           location.weatherElement[8].time[0].elementValue[0].value + "m/s";
+        let locationPop6h;
         try {
           locationPop6h =
             location.weatherElement[7].time[0].elementValue[0].value + "%";
@@ -63,7 +64,7 @@ function getWeatherNowData() {
         };
         locationDataNow = Object.assign({}, locationDataNow, data);
       });
-      return { 現在天氣: locationDataNow };
+      return locationDataNow;
     });
 }
 
@@ -80,7 +81,7 @@ function getWeatherData36hr() {
       locations.forEach((location) => {
         // console.log(location);
         let locationName = location.locationName;
-        weatherTime = [];
+        let weatherTime = [];
         for (let i = 0; i < 3; i++) {
           let locationWx =
             location.weatherElement[0].time[i].parameter.parameterName;
@@ -138,7 +139,7 @@ function getWeatherData36hr() {
         };
         locationData36hr = Object.assign({}, locationData36hr, locationData);
       });
-      return { "36hr預報": locationData36hr };
+      return locationData36hr;
     });
 }
 
@@ -153,6 +154,7 @@ function getWeekData() {
     .then(function (data) {
       let locationWeekData = {};
       let locations = data.records.locations[0].location;
+      let count;
       if (
         locations[0].weatherElement[0].time[0].startTime.substr(11) ==
         "18:00:00"
@@ -207,7 +209,7 @@ function getWeekData() {
         };
         locationWeekData = Object.assign({}, locationWeekData, data);
       });
-      return { 一週預報: locationWeekData };
+      return locationWeekData;
     });
 }
 
@@ -238,7 +240,7 @@ function getSunData() {
         // sunTimeData.push(data);
         sunTimeData = Object.assign({}, sunTimeData, data);
       });
-      return { 日落時間: sunTimeData };
+      return sunTimeData;
     });
 }
 
@@ -247,10 +249,13 @@ async function getData() {
   let locationData36hr = await getWeatherData36hr();
   let sunTimeData = await getSunData();
   let weekData = await getWeekData();
-  console.log(locationDataNow);
-  console.log(locationData36hr);
-  console.log(sunTimeData);
-  console.log(weekData);
+  let allWeatherData = {
+    allWeatherData: {
+      現在天氣: locationDataNow,
+      "36hr預報": locationData36hr,
+      日落時間: sunTimeData,
+      一週預報: weekData,
+    },
+  };
+  return allWeatherData;
 }
-
-getData();
