@@ -18,6 +18,9 @@ const thirdRain = document.getElementById("third_rain");
 const firstImage = document.getElementById("first_image");
 const secondImage = document.getElementById("second_image");
 const thirdImage = document.getElementById("third_image");
+const weekWeatherImgElem = document.querySelectorAll(".week_image");
+const imageBaseUrl =
+  "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/";
 
 let weatherData;
 async function getWeatherData() {
@@ -103,69 +106,49 @@ async function getWeatherData() {
             dateSpan[key].textContent = `${month}/${day}`;
           }
 
-          const imageElements = document.querySelectorAll(".week_image");
+          const WeekforUserLoc =
+            weatherData.allWeatherData["一週預報"][userLocation].data;
 
-          imageElements[0].src =
-            "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-            weatherData.allWeatherData["一週預報"][userLocation].data[1].Wx
-              .value +
-            ".svg";
-          imageElements[1].src =
-            "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-            weatherData.allWeatherData["一週預報"][userLocation].data[2].Wx
-              .value +
-            ".svg";
-          imageElements[2].src =
-            "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-            weatherData.allWeatherData["一週預報"][userLocation].data[3].Wx
-              .value +
-            ".svg";
-          imageElements[3].src =
-            "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-            weatherData.allWeatherData["一週預報"][userLocation].data[4].Wx
-              .value +
-            ".svg";
-          imageElements[4].src =
-            "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-            weatherData.allWeatherData["一週預報"][userLocation].data[5].Wx
-              .value +
-            ".svg";
-          imageElements[5].src =
-            "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-            weatherData.allWeatherData["一週預報"][userLocation].data[6].Wx
-              .value +
-            ".svg";
-          imageElements[6].src =
-            "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-            weatherData.allWeatherData["一週預報"][userLocation].data[0].Wx
-              .value +
-            ".svg";
-          const temperatureDiv = document.querySelectorAll(".week_temperature");
-          temperatureDiv[0].textContent =
+          weekWeatherImgElem[0].src =
+            imageBaseUrl + WeekforUserLoc[1].Wx.value + ".svg";
+          weekWeatherImgElem[1].src =
+            imageBaseUrl + WeekforUserLoc[2].Wx.value + ".svg";
+          weekWeatherImgElem[2].src =
+            imageBaseUrl + WeekforUserLoc[3].Wx.value + ".svg";
+          weekWeatherImgElem[3].src =
+            imageBaseUrl + WeekforUserLoc[4].Wx.value + ".svg";
+          weekWeatherImgElem[4].src =
+            imageBaseUrl + WeekforUserLoc[5].Wx.value + ".svg";
+          weekWeatherImgElem[5].src =
+            imageBaseUrl + WeekforUserLoc[6].Wx.value + ".svg";
+          weekWeatherImgElem[6].src =
+            imageBaseUrl + WeekforUserLoc[0].Wx.value + ".svg";
+          const WeekTempDiv = document.querySelectorAll(".week_temperature");
+          WeekTempDiv[0].textContent =
             weatherData.allWeatherData["一週預報"][
               userLocation
             ].data[1].T.replace(/[^0-9]/g, "") + "°";
-          temperatureDiv[1].textContent =
+          WeekTempDiv[1].textContent =
             weatherData.allWeatherData["一週預報"][
               userLocation
             ].data[2].T.replace(/[^0-9]/g, "") + "°";
-          temperatureDiv[2].textContent =
+          WeekTempDiv[2].textContent =
             weatherData.allWeatherData["一週預報"][
               userLocation
             ].data[3].T.replace(/[^0-9]/g, "") + "°";
-          temperatureDiv[3].textContent =
+          WeekTempDiv[3].textContent =
             weatherData.allWeatherData["一週預報"][
               userLocation
             ].data[4].T.replace(/[^0-9]/g, "") + "°";
-          temperatureDiv[4].textContent =
+          WeekTempDiv[4].textContent =
             weatherData.allWeatherData["一週預報"][
               userLocation
             ].data[5].T.replace(/[^0-9]/g, "") + "°";
-          temperatureDiv[5].textContent =
+          WeekTempDiv[5].textContent =
             weatherData.allWeatherData["一週預報"][
               userLocation
             ].data[6].T.replace(/[^0-9]/g, "") + "°";
-          temperatureDiv[6].textContent =
+          WeekTempDiv[6].textContent =
             weatherData.allWeatherData["一週預報"][
               userLocation
             ].data[0].T.replace(/[^0-9]/g, "") + "°";
@@ -279,72 +262,32 @@ city.forEach((element) => {
       dateSpan[key].textContent = `${month}/${day}`;
     }
 
-    const imageElements = document.querySelectorAll(".week_image");
+    const imageCode = weatherData.allWeatherData["一週預報"][cityNameData].data;
 
-    imageElements[0].src =
-      "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-      weatherData.allWeatherData["一週預報"][cityNameData].data[1].Wx.value +
-      ".svg";
-    imageElements[1].src =
-      "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-      weatherData.allWeatherData["一週預報"][cityNameData].data[2].Wx.value +
-      ".svg";
-    imageElements[2].src =
-      "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-      weatherData.allWeatherData["一週預報"][cityNameData].data[3].Wx.value +
-      ".svg";
-    imageElements[3].src =
-      "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-      weatherData.allWeatherData["一週預報"][cityNameData].data[4].Wx.value +
-      ".svg";
-    imageElements[4].src =
-      "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-      weatherData.allWeatherData["一週預報"][cityNameData].data[5].Wx.value +
-      ".svg";
-    imageElements[5].src =
-      "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-      weatherData.allWeatherData["一週預報"][cityNameData].data[6].Wx.value +
-      ".svg";
-    imageElements[6].src =
-      "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" +
-      weatherData.allWeatherData["一週預報"][cityNameData].data[0].Wx.value +
-      ".svg";
-    const temperatureDiv = document.querySelectorAll(".week_temperature");
-    temperatureDiv[0].textContent =
-      weatherData.allWeatherData["一週預報"][cityNameData].data[1].T.replace(
-        /[^0-9]/g,
-        ""
-      ) + "°";
-    temperatureDiv[1].textContent =
-      weatherData.allWeatherData["一週預報"][cityNameData].data[2].T.replace(
-        /[^0-9]/g,
-        ""
-      ) + "°";
-    temperatureDiv[2].textContent =
-      weatherData.allWeatherData["一週預報"][cityNameData].data[3].T.replace(
-        /[^0-9]/g,
-        ""
-      ) + "°";
-    temperatureDiv[3].textContent =
-      weatherData.allWeatherData["一週預報"][cityNameData].data[4].T.replace(
-        /[^0-9]/g,
-        ""
-      ) + "°";
-    temperatureDiv[4].textContent =
-      weatherData.allWeatherData["一週預報"][cityNameData].data[5].T.replace(
-        /[^0-9]/g,
-        ""
-      ) + "°";
-    temperatureDiv[5].textContent =
-      weatherData.allWeatherData["一週預報"][cityNameData].data[6].T.replace(
-        /[^0-9]/g,
-        ""
-      ) + "°";
-    temperatureDiv[6].textContent =
-      weatherData.allWeatherData["一週預報"][cityNameData].data[0].T.replace(
-        /[^0-9]/g,
-        ""
-      ) + "°";
+    weekWeatherImgElem[0].src = imageBaseUrl + imageCode[1].Wx.value + ".svg";
+    weekWeatherImgElem[1].src = imageBaseUrl + imageCode[2].Wx.value + ".svg";
+    weekWeatherImgElem[2].src = imageBaseUrl + imageCode[3].Wx.value + ".svg";
+    weekWeatherImgElem[3].src = imageBaseUrl + imageCode[4].Wx.value + ".svg";
+    weekWeatherImgElem[4].src = imageBaseUrl + imageCode[5].Wx.value + ".svg";
+    weekWeatherImgElem[5].src = imageBaseUrl + imageCode[6].Wx.value + ".svg";
+    weekWeatherImgElem[6].src = imageBaseUrl + imageCode[0].Wx.value + ".svg";
+    const WeekTempDiv = document.querySelectorAll(".week_temperature");
+    const WeekTempSource =
+      weatherData.allWeatherData["一週預報"][cityNameData].data;
+    WeekTempDiv[0].textContent =
+      WeekTempSource[1].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[1].textContent =
+      WeekTempSource[2].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[2].textContent =
+      WeekTempSource[3].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[3].textContent =
+      WeekTempSource[4].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[4].textContent =
+      WeekTempSource[5].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[5].textContent =
+      WeekTempSource[6].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[6].textContent =
+      WeekTempSource[0].T.replace(/[^0-9]/g, "") + "°";
     const windSpan = document.querySelectorAll(".week_wind");
     const winddata = weatherData.allWeatherData["一週預報"][cityNameData].data;
     windSpan[0].textContent = parseInt(winddata[1].WS.match(/\d+/)[0], 10);
