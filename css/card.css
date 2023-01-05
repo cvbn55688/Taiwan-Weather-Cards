@@ -11,10 +11,34 @@
     padding: 10px;
 }
 
+/* --- 按鈕設定 -------------------------------------------------------- */
+.button_container{
+    width: 100%;
+    font-family: var(--chinese-font);
+    position: absolute;
+    top: -80px;
+    right: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.button{
+    width: 40%;
+    padding: 15px 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 22px;
+    border: 0;
+    background-color: #1a67b1;
+    border-radius: 10px;
+}
+.button:hover{
+    background-color: #2c5983;
+}
+
 /* --- 今日天氣狀況 ----------------------------------------------------- */
 
 /* 城市、日期、天氣圖 */
-.today_container{ padding: 10px;}
+.today_container{ padding: 0 10px 10px 10px;}
 .today_box{ width: 50%;}
 .today_city{
     width: 100%;
@@ -26,7 +50,7 @@
 }
 .today_calendar_box{
     position: absolute;
-    top: -10px;
+    top: -15px;
     right: 0;
 }
 .today_calendar{
