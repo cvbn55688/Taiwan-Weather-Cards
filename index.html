@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="image/weather.ico" type="image/x-icon" />
-    <title>台灣天氣預測</title>
+    <title>team 14-Taiwan Weather Card</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <!-- 建立整體樣式指導：基礎字型、字體、基底色、標題、段落樣式等等 -->
     <link rel="stylesheet" type="text/css" href="css/common.css" />
@@ -18,16 +18,26 @@
   </head>
 
   <body>
+    <header class="header">
+      <nav>
+        <a href="index.html">
+          <img class="nav_logo" src="image/logo.png" alt=""
+          ><span class="nav_title">Taiwan Weather Card</span>
+        </a>
+      </nav>
+    </header>
+
     <div class="wrapper">
-      <!-- BUTTON -->
-      <!-- <div class="button_container">
-        <button class="latest_button"></button>
-        <button class=""></button>
-      </div> -->
-      <!-- // BUTTON -->
 
       <!-- WEATHER CARDS -->
       <div class="card_container">
+        <!-- 按鈕 -->
+        <!-- <div class="button_container">
+          <button class="button latest_button">最新天氣觀測</button>
+          <button class="button week_button">一周天氣預報</button>
+        </div> -->
+        <!-- // 按鈕 -->
+
         <!-- 今日天氣狀況 -->
         <div class="today_container" id="today">
           <!-- 城市、日期 -->
@@ -233,7 +243,7 @@
 
       <!-- 台灣地圖 -->
       <!-- 如需設定點擊事件，請參考g tag的id與class -->
-      <div class="taiwan_container" style="width: 60%">
+      <div class="taiwan_container" style="width: 58%">
         <div class="taiwan_map">
           <div class="nametag">
             <div class="nametag_box keelung_city_nametag" style="display: none;">
@@ -735,6 +745,9 @@
       </div>
       <!-- // 台灣地圖 -->
     </div>
+
+    <img class="cloud" src="https://www.cwb.gov.tw/V8/assets/img/home/jumbotron_cloud_pattern_l1.png" alt="">
+    <img class="cloud bottom_cloud" src="https://www.cwb.gov.tw/V8/assets/img/home/jumbotron_cloud_pattern_l2.png" alt="">
 
     <script src="js/getData.js"></script>
     <script src="js/eventControl.js"></script>
