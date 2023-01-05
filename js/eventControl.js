@@ -119,16 +119,20 @@ async function getWeatherData() {
           const dateSpan = document.querySelectorAll(".dateSpan");
           const dateobject =
             weatherData.allWeatherData["一週預報"][userLocation].data;
-          // console.log(dateobject);
+          console.log(dateobject);
 
-          for (const key in dateobject) {
-            const obj = dateobject[key];
+          for (i = 0; i < 6; i++) {
+            const obj = dateobject[i + 1];
             const startTime = obj.startTime;
             const date = new Date(startTime);
             const month = date.getMonth() + 1; // months are 0-based
             const day = date.getDate();
-            dateSpan[key].textContent = `${month}/${day}`;
+            dateSpan[i].textContent = `${month}/${day}`;
           }
+
+          dateSpan[6].textContent = `${
+            date.getMonth(new Date(dateobject[0].startTime)) + 1
+          }/${new Date(dateobject[0].startTime).getDate()}`;
 
           const WeekforUserLoc =
             weatherData.allWeatherData["一週預報"][userLocation].data;
@@ -277,14 +281,21 @@ city.forEach((element) => {
       weatherData.allWeatherData["一週預報"][cityNameData].data;
     // console.log(dateobject);
 
-    for (const key in dateobject) {
-      const obj = dateobject[key];
+    for (i = 0; i < 6; i++) {
+      const obj = dateobject[i + 1];
       const startTime = obj.startTime;
       const date = new Date(startTime);
       const month = date.getMonth() + 1; // months are 0-based
       const day = date.getDate();
-      dateSpan[key].textContent = `${month}/${day}`;
+      dateSpan[i].textContent = `${month}/${day}`;
     }
+
+    dateSpan[6].textContent = `${
+      date.getMonth(new Date(dateobject[0].startTime)) + 1
+    }/${new Date(dateobject[0].startTime).getDate()}`;
+
+    const WeekforUserLoc =
+      weatherData.allWeatherData["一週預報"][userLocation].data;
 
     const imageCode = weatherData.allWeatherData["一週預報"][cityNameData].data;
 
