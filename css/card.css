@@ -12,12 +12,12 @@
 }
 
 /* --- 按鈕設定 -------------------------------------------------------- */
-.button_container{
+/* .button_container{
     width: 100%;
     font-family: var(--chinese-font);
     position: absolute;
     top: -80px;
-    right: 5px;
+    right: 2px;
     display: flex;
     justify-content: space-around;
 }
@@ -33,7 +33,7 @@
 }
 .button:hover{
     background-color: #2c5983;
-}
+} */
 
 /* --- 今日天氣狀況 ----------------------------------------------------- */
 
