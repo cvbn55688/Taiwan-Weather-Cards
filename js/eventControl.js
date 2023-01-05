@@ -22,6 +22,8 @@ const weekWeatherImgElem = document.querySelectorAll(".week_image");
 const imageBaseUrl =
   "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/";
 
+const hoursBox = document.querySelectorAll(".hours_box");
+
 let weatherData;
 async function getWeatherData() {
   weatherData = await getData();
@@ -83,6 +85,20 @@ async function getWeatherData() {
             2,
             "0"
           )}.svg`;
+          hoursBox.forEach((element) => {
+            if (
+              element.querySelector(".hours_title").textContent.endsWith("天")
+            ) {
+              element.classList.add("morning_box");
+            } else if (
+              element.querySelector(".hours_title").textContent.endsWith("上")
+            ) {
+              element.classList.add("afternoon_box");
+            } else {
+              element.classList.add("midnight_box");
+            }
+          });
+
           const sunriseTimeSpan = document.querySelector(".sunrise_time");
           const sunsetTimeSpan = document.querySelector(".sunset_time");
           const daytime =
