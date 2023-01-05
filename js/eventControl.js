@@ -276,13 +276,15 @@ city.forEach((element) => {
     sunriseTimeSpan.textContent = sunriseTime;
     sunsetTimeSpan.textContent = sunsetTime;
 
-    const dateSpan = document.querySelectorAll(".dateSpan");
-    const dateobject =
+    const Weeklydata =
       weatherData.allWeatherData["一週預報"][cityNameData].data;
-    // console.log(dateobject);
+    // console.log("Weeklydata:");
+    // console.log(Weeklydata);
+
+    const dateSpan = document.querySelectorAll(".dateSpan");
 
     for (i = 0; i < 6; i++) {
-      const obj = dateobject[i + 1];
+      const obj = Weeklydata[i + 1];
       const startTime = obj.startTime;
       const date = new Date(startTime);
       const month = date.getMonth() + 1; // months are 0-based
@@ -291,46 +293,33 @@ city.forEach((element) => {
     }
 
     dateSpan[6].textContent = `${
-      date.getMonth(new Date(dateobject[0].startTime)) + 1
-    }/${new Date(dateobject[0].startTime).getDate()}`;
+      date.getMonth(new Date(Weeklydata[0].startTime)) + 1
+    }/${new Date(Weeklydata[0].startTime).getDate()}`;
 
-    const WeekforUserLoc =
-      weatherData.allWeatherData["一週預報"][userLocation].data;
+    weekWeatherImgElem[0].src = imageBaseUrl + Weeklydata[1].Wx.value + ".svg";
+    weekWeatherImgElem[1].src = imageBaseUrl + Weeklydata[2].Wx.value + ".svg";
+    weekWeatherImgElem[2].src = imageBaseUrl + Weeklydata[3].Wx.value + ".svg";
+    weekWeatherImgElem[3].src = imageBaseUrl + Weeklydata[4].Wx.value + ".svg";
+    weekWeatherImgElem[4].src = imageBaseUrl + Weeklydata[5].Wx.value + ".svg";
+    weekWeatherImgElem[5].src = imageBaseUrl + Weeklydata[6].Wx.value + ".svg";
+    weekWeatherImgElem[6].src = imageBaseUrl + Weeklydata[0].Wx.value + ".svg";
 
-    const imageCode = weatherData.allWeatherData["一週預報"][cityNameData].data;
-
-    weekWeatherImgElem[0].src = imageBaseUrl + imageCode[1].Wx.value + ".svg";
-    weekWeatherImgElem[1].src = imageBaseUrl + imageCode[2].Wx.value + ".svg";
-    weekWeatherImgElem[2].src = imageBaseUrl + imageCode[3].Wx.value + ".svg";
-    weekWeatherImgElem[3].src = imageBaseUrl + imageCode[4].Wx.value + ".svg";
-    weekWeatherImgElem[4].src = imageBaseUrl + imageCode[5].Wx.value + ".svg";
-    weekWeatherImgElem[5].src = imageBaseUrl + imageCode[6].Wx.value + ".svg";
-    weekWeatherImgElem[6].src = imageBaseUrl + imageCode[0].Wx.value + ".svg";
     const WeekTempDiv = document.querySelectorAll(".week_temperature");
-    const WeekTempSource =
-      weatherData.allWeatherData["一週預報"][cityNameData].data;
-    WeekTempDiv[0].textContent =
-      WeekTempSource[1].T.replace(/[^0-9]/g, "") + "°";
-    WeekTempDiv[1].textContent =
-      WeekTempSource[2].T.replace(/[^0-9]/g, "") + "°";
-    WeekTempDiv[2].textContent =
-      WeekTempSource[3].T.replace(/[^0-9]/g, "") + "°";
-    WeekTempDiv[3].textContent =
-      WeekTempSource[4].T.replace(/[^0-9]/g, "") + "°";
-    WeekTempDiv[4].textContent =
-      WeekTempSource[5].T.replace(/[^0-9]/g, "") + "°";
-    WeekTempDiv[5].textContent =
-      WeekTempSource[6].T.replace(/[^0-9]/g, "") + "°";
-    WeekTempDiv[6].textContent =
-      WeekTempSource[0].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[0].textContent = Weeklydata[1].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[1].textContent = Weeklydata[2].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[2].textContent = Weeklydata[3].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[3].textContent = Weeklydata[4].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[4].textContent = Weeklydata[5].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[5].textContent = Weeklydata[6].T.replace(/[^0-9]/g, "") + "°";
+    WeekTempDiv[6].textContent = Weeklydata[0].T.replace(/[^0-9]/g, "") + "°";
+
     const windSpan = document.querySelectorAll(".week_wind");
-    const winddata = weatherData.allWeatherData["一週預報"][cityNameData].data;
-    windSpan[0].textContent = parseInt(winddata[1].WS.match(/\d+/)[0], 10);
-    windSpan[1].textContent = parseInt(winddata[2].WS.match(/\d+/)[0], 10);
-    windSpan[2].textContent = parseInt(winddata[3].WS.match(/\d+/)[0], 10);
-    windSpan[3].textContent = parseInt(winddata[4].WS.match(/\d+/)[0], 10);
-    windSpan[4].textContent = parseInt(winddata[5].WS.match(/\d+/)[0], 10);
-    windSpan[5].textContent = parseInt(winddata[6].WS.match(/\d+/)[0], 10);
-    windSpan[6].textContent = parseInt(winddata[0].WS.match(/\d+/)[0], 10);
+    windSpan[0].textContent = parseInt(Weeklydata[1].WS.match(/\d+/)[0], 10);
+    windSpan[1].textContent = parseInt(Weeklydata[2].WS.match(/\d+/)[0], 10);
+    windSpan[2].textContent = parseInt(Weeklydata[3].WS.match(/\d+/)[0], 10);
+    windSpan[3].textContent = parseInt(Weeklydata[4].WS.match(/\d+/)[0], 10);
+    windSpan[4].textContent = parseInt(Weeklydata[5].WS.match(/\d+/)[0], 10);
+    windSpan[5].textContent = parseInt(Weeklydata[6].WS.match(/\d+/)[0], 10);
+    windSpan[6].textContent = parseInt(Weeklydata[0].WS.match(/\d+/)[0], 10);
   });
 });
