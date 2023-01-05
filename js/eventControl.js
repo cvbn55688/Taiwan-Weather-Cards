@@ -38,10 +38,18 @@ async function getWeatherData() {
             `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyAsK9wJr_DVUNY6SR7R4oOIOvuvt2fBIeg`
           );
           const fetchResponse = await fetchDate.json();
-          let userLocation = fetchResponse.results[4].formatted_address.slice(
-            13,
-            16
-          );
+          let userLocation;
+          if (navigator.language.slice(0, 2) === "en") {
+            userLocation = fetchResponse.results[4].formatted_address.slice(
+              13,
+              16
+            );
+          } else if (navigator.language.slice(0, 2) === "zh") {
+            userLocation = fetchResponse.results[4].formatted_address.slice(
+              5,
+              8
+            );
+          }
           if (userLocation.includes("台")) {
             userLocation = userLocation.replace("台", "臺");
           }
