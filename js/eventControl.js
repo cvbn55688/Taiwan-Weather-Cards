@@ -74,10 +74,10 @@ getWeatherData();
 
 city.forEach((element) => {
   element.addEventListener("click", () => {
-    document.querySelectorAll("path").forEach((element) => {
-      element.style.fill = "#e6f8fc";
+    document.querySelectorAll("a").forEach((element) => {
+      element.classList.remove("is-active");
     });
-    element.querySelector("path").style.fill = "#197ac9";
+    element.parentElement.classList.add("is-active");
     const cityNameData = element.querySelector("desc").textContent.slice(0, 3);
     showTodayWeather(cityNameData);
     show36hrWeather(cityNameData);
