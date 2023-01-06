@@ -81,7 +81,7 @@
 
   > 呈現當前所在縣市或所選擇縣市自當前日期往後一周之天氣情形。其中包含星期、日期、天氣狀況（晴、陰、多雲、有雨...等）、溫度、風速。
 
-  ![](image/weeklyWeather.png)
+  ![](https://github.com/wanhsuan625/Taiwan-Weather-Cards/blob/develop/image/team%2014-Taiwan%20Weather%20Card.gif)
 
 # 響應式設計呈現
 
