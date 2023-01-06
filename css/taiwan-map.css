@@ -1,0 +1,96 @@
+a {
+  background-color: transparent;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+#default_map #position .icon-in path {
+  fill: #010840 !important;
+  stroke: none !important;
+}
+/* 台灣地圖 */
+.taiwan_map {
+  position: relative;
+  height: 100%;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -o-flex-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#default_map {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin: 0;
+}
+#default_map svg {
+  max-width: 100%;
+}
+#default_map svg a {
+  cursor: pointer;
+}
+#default_map svg path {
+  fill: #e6f8fc;
+  stroke: #197ac9;
+  stroke-width: 1px;
+  stroke-miterlimit: 10;
+  stroke-dashoffset: 0 !important;
+}
+#default_map svg path:hover {
+  fill: rgba(255, 255, 255, 0);
+}
+.map_theme g,
+.map_theme path {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transform: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+#default_map svg a.is-active path {
+  fill: #63a7df;
+}
+
+/* RWD 設定區 */
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 1024px) {
+}
+@media only screen and (max-width: 768px) {
+  #default_map {
+    width: 200%;
+  }
+  #default_map svg {
+    min-width: 360px;
+  }
+}
+@media only screen and (max-width: 480px) {
+}

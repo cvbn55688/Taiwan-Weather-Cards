@@ -1,3 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Noto+Sans+TC:wght@500;700;900&display=swap');
+:root{
+  --chinese-font: "Noto Sans TC", "微軟正黑體", "黑體-繁",sans-serif;
+  --number-font: "Comic Sans MS";
+}
+*{
+  box-sizing: border-box;
+  position: relative;
+}
 body {
-  font-size: 20px;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-height: 100vh;
+  background-color: #659fe0;
+}
+.wrapper{
+  width: 1200px;
+  margin: 30px auto;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* NAVBAR */
+.header{
+  width: 100%;
+  background-color: rgb(59, 92, 141);
+  box-shadow: 3px 0 5px 5px #031a35;
+  padding: 30px 70px;
+}
+.nav{
+  display: flex;
+  align-items: center;
+}
+.nav_logo{
+  transform: scale(1.3);
+  margin-right: 30px;
+}
+.nav_title{
+  font-size: 50px;
+  color: #fff;
+  font-family: "Comic Sans MS";
+  margin: auto 0;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer{
+  display: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: rgb(226, 226, 226);
+  padding: 20px;
+  font-family: var(--chinese-font);
+}
+.footer_title{
+  letter-spacing: 3px;
+  font-size: 24px;
+  margin: 5px 0 8px 0;
+  font-weight: 600;
+}
+.footer_content{
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.footer_link{ color: #000;}
+
+/* 背景雲朵 */
+.cloud{
+  width: 100%;
+  max-height: 800px;
+  position: fixed;
+  bottom: 280px;
+  z-index: -2;
+  opacity: 0.8;
+}
+.bottom_cloud{
+  bottom: 0;
+  z-index: -1;
+  opacity: 1;
+}
+
+
+/* RWD 設定區 */
+@media only screen and (max-width: 1200px){
+  .wrapper{ 
+    width: 90vw;
+    padding: 75px 0;
+  }
+  .cloud{ height: 600px;}
+}
+@media only screen and (max-width: 1024px){
+}
+@media only screen and (max-width: 768px){
+  .wrapper{
+    padding: 30px 0;
+
+    flex-direction: column-reverse;
+  }
+  .header{ padding: 20px 20px;}
+  .nav_logo{ transform: none;}
+  .nav_title{ font-size: 40px;}
+}
+@media only screen and (max-width: 480px){
+  .wrapper{
+    padding: 15px 0;
+  }
+
+  .nav_logo{
+    transform: scale(0.8);
+    margin-right: 10px;
+  }
+  .nav_title{
+    font-size: 30px;
+  }
 }

@@ -1,0 +1,764 @@
+.nametag{ 
+    position: absolute;
+    z-index: 999;
+}
+.nametag_box{
+    width: 160px;
+    height: 50px;
+    margin: 10px;
+    padding-top: 15px;
+
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+    text-align: center;
+
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+}
+.city_nametag{
+    font-size: 20px;
+}
+@media only screen and (max-width: 1200px){
+    .nametag_box{
+        width: 130px;
+        height: 45px;
+        margin: 10px;
+        padding-top: 13px;
+    }
+    .city_nametag{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .nametag_box{
+        width: 115px;
+        height: 40px;
+        margin: 10px;
+        padding-top: 10px;
+    }
+    .city_nametag{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .nametag_box{
+        width: 115px;
+        height: 35px;
+        margin: 10px;
+        padding-top: 8px;
+    }
+    .city_nametag{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .nametag_box{
+        width: 90px;
+        height: 30px;
+        margin: 10px;
+        padding-top: 5px;
+    }
+    .city_nametag{
+        font-size: 14px;
+    }
+}
+/* Animation */
+@-webkit-keyframes slide-in{
+    0%{
+        -webkit-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0);
+    }
+    to{
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+@keyframes slide-in{
+    0%{
+        -webkit-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0);
+    }
+    to{
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+/* 基隆市 */
+.taiwan_map .nametag .keelung_city_nametag{
+    position: relative;
+    left: 140px;
+    top: 0px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .keelung_city_nametag{
+        left: 140px;
+        top: 0px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .keelung_city_nametag{
+        left: 150px;
+        top: 0px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .keelung_city_nametag{
+        left: 80px;
+        top: -10px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .keelung_city_nametag{
+        left: 100px;
+        top: -5px;
+    }
+}
+/* 新北市 */
+.taiwan_map .nametag .new_taipei_city_nametag{
+    position: relative;
+    left: 250px;
+    top: 0px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .new_taipei_city_nametag{
+        left: 230px;
+        top: 0px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .new_taipei_city_nametag{
+        left: 180px;
+        top: 0px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .new_taipei_city_nametag{
+        left: 180px;
+        top: 0px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .new_taipei_city_nametag{
+        left: 140px;
+        top: 0px;
+    }
+}
+@media only screen and (max-width: 360px){
+    .taiwan_map .nametag .new_taipei_city_nametag{
+        left: 130px;
+        top: 0px;
+    }
+}
+/* 臺北市 */
+.taiwan_map .nametag .taipei_city_nametag{
+    position: relative;
+    left: 90px;
+    top: 0;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .taipei_city_nametag{
+        left: 70px;
+        top: 0;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .taipei_city_nametag{
+        left: 50px;
+        top: 0;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .taipei_city_nametag{
+        left: 0px;
+        top: 0px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .taipei_city_nametag{
+        left: 0px;
+        top: 10px;
+    }
+}
+/* 桃園市 */
+.taiwan_map .nametag .taoyuan_city_nametag{
+    left: 60px;
+    top: 20px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .taoyuan_city_nametag{
+        left: 20px;
+        top: 30px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .taoyuan_city_nametag{
+        left: 0px;
+        top: 20px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .taoyuan_city_nametag{
+        left: 0px;
+        top: 10px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .taoyuan_city_nametag{
+        left: 0px;
+        top: 10px;
+    }
+}
+/* 新竹縣 */
+.taiwan_map .nametag .hsinchu_county_nametag{
+    position: relative;
+    left: -20px;
+    top: 60px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .hsinchu_county_nametag{
+        left: -20px;
+        top: 60px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .hsinchu_county_nametag{
+        left: -20px;
+        top: 60px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .hsinchu_county_nametag{
+        left: -25px;
+        top: 30px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .hsinchu_county_nametag{
+        left: -25px;
+        top: 30px;
+    }
+}
+/* 新竹市 */
+.taiwan_map .nametag .hsinchu_city_nametag{
+    position: relative;
+    left: -50px;
+    top: 100px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .hsinchu_city_nametag{
+        left: -50px;
+        top: 100px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .hsinchu_city_nametag{
+        left: -50px;
+        top: 90px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .hsinchu_city_nametag{
+        left: -45px;
+        top: 50px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .hsinchu_city_nametag{
+        left: -35px;
+        top: 50px;
+    }
+}
+/* 苗栗縣 */
+.taiwan_map .nametag .miaoli_county_nametag{
+    position: relative;
+    left: -70px;
+    top: 130px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .miaoli_county_nametag{
+        left: -70px;
+        top: 130px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .miaoli_county_nametag{
+        left: -80px;
+        top: 120px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .miaoli_county_nametag{
+        left: -50px;
+        top: 60px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .miaoli_county_nametag{
+        left: -35px;
+        top: 60px;
+    }
+}
+/* 臺中市 */
+.taiwan_map .nametag .taichung_city_nametag{
+    position: relative;
+    left: -120px;
+    top: 200px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .taichung_city_nametag{
+        left: -110px;
+        top: 200px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .taichung_city_nametag{
+        left: -110px;
+        top: 200px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .taichung_city_nametag{
+        left: -90px;
+        top: 120px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .taichung_city_nametag{
+        left: -70px;
+        top: 100px;
+    }
+}
+/* 南投縣 */
+.taiwan_map .nametag .nantou_county_nametag{
+    position: relative;
+    left: -140px;
+    top: 230px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .nantou_county_nametag{
+        left: -120px;
+        top: 230px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .nantou_county_nametag{
+        left: -120px;
+        top: 230px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .nantou_county_nametag{
+        left: -100px;
+        top: 150px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .nantou_county_nametag{
+        left: -90px;
+        top: 150px;
+    }
+}
+/* 彰化縣 */
+.taiwan_map .nametag .changhua_county_nametag{
+    position: relative;
+    left: -160px;
+    top: 290px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .changhua_county_nametag{
+        left: -160px;
+        top: 290px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .changhua_county_nametag{
+        left: -130px;
+        top: 240px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .changhua_county_nametag{
+        left: -110px;
+        top: 150px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .changhua_county_nametag{
+        left: -90px;
+        top: 150px;
+    }
+}
+/* 雲林縣 */
+.taiwan_map .nametag .yunlin_county_nametag{
+    position: relative;
+    left: -210px;
+    top: 370px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .yunlin_county_nametag{
+        left: -190px;
+        top: 340px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .yunlin_county_nametag{
+        left: -170px;
+        top: 310px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .yunlin_county_nametag{
+        left: -140px;
+        top: 220px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .yunlin_county_nametag{
+        left: -120px;
+        top: 190px;
+    }
+}
+/* 嘉義縣 */
+.taiwan_map .nametag .chiayi_county_nametag{
+    position: relative;
+    left: -230px;
+    top: 460px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .chiayi_county_nametag{
+        left: -190px;
+        top: 380px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .chiayi_county_nametag{
+        left: -170px;
+        top: 330px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .chiayi_county_nametag{
+        left: -150px;
+        top: 250px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .chiayi_county_nametag{
+        left: -130px;
+        top: 230px;
+    }
+}
+/* 嘉義市 */
+.taiwan_map .nametag .chiayi_city_nametag{
+    position: relative;
+    left: -230px;
+    top: 460px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .chiayi_city_nametag{
+        left: -190px;
+        top: 380px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .chiayi_city_nametag{
+        left: -170px;
+        top: 330px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .chiayi_city_nametag{
+        left: -150px;
+        top: 250px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .chiayi_city_nametag{
+        left: -130px;
+        top: 230px;
+    }
+}
+/* 臺南市 */
+.taiwan_map .nametag .tainan_city_nametag{
+    position: relative;
+    left: -245px;
+    top: 520px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .tainan_city_nametag{
+        left: -220px;
+        top: 490px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .tainan_city_nametag{
+        left: -180px;
+        top: 400px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .tainan_city_nametag{
+        left: -150px;
+        top: 300px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .tainan_city_nametag{
+        left: -130px;
+        top: 260px;
+    }
+}
+/* 高雄市 */
+.taiwan_map .nametag .kaohsiung_city_nametag{
+    position: relative;
+    left: -230px;
+    top: 630px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .kaohsiung_city_nametag{
+        left: -190px;
+        top: 560px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .kaohsiung_city_nametag{
+        left: -170px;
+        top: 500px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .kaohsiung_city_nametag{
+        left: -140px;
+        top: 380px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .kaohsiung_city_nametag{
+        left: -120px;
+        top: 320px;
+    }
+}
+/* 屏東縣 */
+.taiwan_map .nametag .pingtung_county_nametag{
+    position: relative;
+    left: -140px;
+    top: 820px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .pingtung_county_nametag{
+        left: -100px;
+        top: 720px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .pingtung_county_nametag{
+        left: -100px;
+        top: 600px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .pingtung_county_nametag{
+        left: -70px;
+        top: 460px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .pingtung_county_nametag{
+        left: -70px;
+        top: 410px;
+    }
+}
+/* 臺東縣 */
+.taiwan_map .nametag .taitung_county_nametag{
+    position: relative;
+    left: 140px;
+    top: 750px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .taitung_county_nametag{
+        left: 200px;
+        top: 520px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .taitung_county_nametag{
+        left: 180px;
+        top: 450px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .taitung_county_nametag{
+        left: 130px;
+        top: 370px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .taitung_county_nametag{
+        left: 80px;
+        top: 370px;
+    }
+}
+/* 花蓮縣 */
+.taiwan_map .nametag .hualien_county_nametag{
+    position: relative;
+    left: 300px;
+    top: 350px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .hualien_county_nametag{
+        left: 245px;
+        top: 350px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .hualien_county_nametag{
+        left: 160px;
+        top: 350px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .hualien_county_nametag{
+        left: 170px;
+        top: 190px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .hualien_county_nametag{
+        left: 140px;
+        top: 170px;
+    }
+}
+@media only screen and (max-width: 360px){
+    .taiwan_map .nametag .hualien_county_nametag{
+        left: 130px;
+        top: 100px;
+    }
+}
+/* 宜蘭縣 */
+.taiwan_map .nametag .yilan_county_nametag{
+    position: relative;
+    left: 350px;
+    top: 150px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .yilan_county_nametag{
+        left: 270px;
+        top: 100px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .yilan_county_nametag{
+        left: 170px;
+        top: 220px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .yilan_county_nametag{
+        left: 200px;
+        top: 70px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .yilan_county_nametag{
+        left: 140px;
+        top: 50px;
+    }
+}
+@media only screen and (max-width: 360px){
+    .taiwan_map .nametag .yilan_county_nametag{
+        left: 120px;
+        top: 30px;
+    }
+}
+/* 澎湖縣 */
+.taiwan_map .nametag .penghu_county_nametag{
+    position: relative;
+    left: -220px;
+    top: 390px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .penghu_county_nametag{
+        left: -150px;
+        top: 360px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .penghu_county_nametag{
+        left: -120px;
+        top: 280px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .penghu_county_nametag{
+        left: -100px;
+        top: 210px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .penghu_county_nametag{
+        left: -120px;
+        top: 190px;
+    }
+}
+/* 金門縣 */
+.taiwan_map .nametag .kinmen_county_nametag{
+    position: relative;
+    left: -160px;
+    top: 250px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .kinmen_county_nametag{
+        left: -130px;
+        top: 240px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .kinmen_county_nametag{
+        left: -120px;
+        top: 160px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .kinmen_county_nametag{
+        left: -100px;
+        top: 110px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .kinmen_county_nametag{
+        left: -100px;
+        top: 105px;
+    }
+}
+/* 連江縣 */
+.taiwan_map .nametag .lianjiang_county_nametag{
+    position: relative;
+    left: -160px;
+    top: 150px;
+}
+@media only screen and (max-width: 1200px){
+    .taiwan_map .nametag .lianjiang_county_nametag{
+        left: -120px;
+        top: 90px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .taiwan_map .nametag .lianjiang_county_nametag{
+        left: -100px;
+        top: 90px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .taiwan_map .nametag .lianjiang_county_nametag{
+        left: -65px;
+        top: 40px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .taiwan_map .nametag .lianjiang_county_nametag{
+        left: -80px;
+        top: 80px;
+    }
+}
