@@ -22,8 +22,14 @@ const sunriseTimeSpan = document.querySelector(".sunrise_time");
 const sunsetTimeSpan = document.querySelector(".sunset_time");
 const dateSpan = document.querySelectorAll(".dateSpan");
 const weekWeatherImgElem = document.querySelectorAll(".week_image");
-const imageBaseUrl =
-  "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/";
+let dayOrNight;
+const dateTime = new Date().getHours();
+if (dateTime <= 6 || dateTime >= 18) {
+  dayOrNight = "night";
+} else {
+  dayOrNight = "day";
+}
+const imageBaseUrl = `https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${dayOrNight}/`;
 const hoursBox = document.querySelectorAll(".hours_box");
 const defaultLocation = "臺北市";
 const weekContainer = document.querySelector(".week_container");
@@ -87,7 +93,7 @@ function showTodayWeather(location) {
   todayTemperature.textContent = `${cityWeatherNow.T.slice(0, 2)}°`;
   todayWind.textContent = cityWeatherNow.WS;
   todayRain.textContent = cityWeatherNow.Pop6h;
-  todayImage.src = `https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/${cityWeatherNow.Wx.value}.svg`;
+  todayImage.src = `https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${dayOrNight}/${cityWeatherNow.Wx.value}.svg`;
 }
 
 function show36hrWeather(location) {
@@ -111,15 +117,15 @@ function show36hrWeather(location) {
   firstRain.textContent = city36hrWeatherData[0].data.Pop12h;
   secondRain.textContent = city36hrWeatherData[1].data.Pop12h;
   thirdRain.textContent = city36hrWeatherData[2].data.Pop12h;
-  firstImage.src = `https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/${city36hrWeatherData[0].data.Wx.value.padStart(
+  firstImage.src = `https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${dayOrNight}/${city36hrWeatherData[0].data.Wx.value.padStart(
     2,
     "0"
   )}.svg`;
-  secondImage.src = `https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/${city36hrWeatherData[1].data.Wx.value.padStart(
+  secondImage.src = `https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${dayOrNight}/${city36hrWeatherData[1].data.Wx.value.padStart(
     2,
     "0"
   )}.svg`;
-  thirdImage.src = `https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/${city36hrWeatherData[2].data.Wx.value.padStart(
+  thirdImage.src = `https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${dayOrNight}/${city36hrWeatherData[2].data.Wx.value.padStart(
     2,
     "0"
   )}.svg`;
