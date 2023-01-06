@@ -3,10 +3,12 @@ function hoverEffect(city, nameTag){
     document.querySelector(city).addEventListener('mouseover', () => {
         document.querySelector(nameTag).style.removeProperty('display');
         document.querySelector(nameTag).style.display = "block";
+        document.querySelector(nameTag).classList.add('.slide-in');
     })
     document.querySelector(city).addEventListener('mouseout', () => {
         document.querySelector(nameTag).style.removeProperty('display');
         document.querySelector(nameTag).style.display = "none";
+        document.querySelector(nameTag).classList.remove('.slide-in');
     })
 }
 
