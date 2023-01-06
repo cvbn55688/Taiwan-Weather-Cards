@@ -75,6 +75,9 @@ a:active {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+#default_map svg a.is-active path {
+  fill: #63a7df;
+}
 
 /* RWD 設定區 */
 @media only screen and (max-width: 1200px) {
