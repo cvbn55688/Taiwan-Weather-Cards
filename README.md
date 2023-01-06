@@ -9,33 +9,47 @@
   > 可配合多款不同裝置來顯示畫面。在768px的介面之下，將畫面分割為上、下兩部分呈現。
 
 <h1>資料串接</h1>
+<h1>API Fetching</h1>
 <h3>取得當下天氣狀況</h3>
+<h3>Fetching current weather</h3>
 <p>API:https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=${key}</p>
 <p>以下為初始資料:</p>
+<p>The initial data:</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211013359-5df724bf-e470-409e-9e1d-27675af7bc29.png"/>
 <p>利用for迴圈將各資料取出，並只取第一筆時間資料，最後統整成一個object。</p>
+<p>The first results will be fetched using the FOR loops for making up an object。</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211013060-439250d7-9e4d-4937-be39-deb50a5de761.png"/>
 
 <br/>
 
 <h3>取得近36小時的天氣資料</h3>
+<h3>Fetching the previous 36 hrs data </h3>
 <p>API:https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=${key}</p>
 <p>以下為初始資料:</p>
+<p>The initial data:</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211013953-852658ef-237b-4095-b2fd-cb907ba4b937.png"/>
 <p>利用for迴圈將各資料取出，並判斷取得之資料為「今日白天」、「今日晚上」、「今晚明晨」、「明日白天」、「明日晚上」。</p>
+<p>The time frames of the data are categorized as "daytime","night","predawn","tomorrow daytime", and "tomorrow night" as results by using the FOR loop. </p>
 <p>將資料內start time取出並判斷是什麼時間點，部分時間會利用new Date()來判斷是今日或明日。</p>
+<p>The method for getting the timeframe: 
+it is either defined by value of the object key "starttime" or the "new Date()" to further set the time as today or tomorrow. 。</p>
 <p>以下為判斷方法：</p>
+<p>The following shows how the time frame is illustrated：</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211014592-1479a114-ed4a-4c9f-a23e-d9f1d69e9662.png"/>
 <p>最後將資料打包：</p>
+<p>The flows that the function contains：</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211014870-0d2bac54-c852-4546-8dd5-57c154c5996c.png"/>
 
 <br/>
 
 <h3>取得一週的天氣資料</h3>
+<h3>Fetching the weekly weather data</h3>
 <p>API:"https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=${key}"</p>
 <p>以下為初始資料:</p>
+<p>The initial data:</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211015439-c470c859-ce8c-4e93-b56c-bc8d769f9d9d.png"/>
 <p>利用for迴圈將各資料取出，因為氣象局會隨時間更新資料，所以要在更新時更換要取的時間，才能正確取得資料。</p>
+<p>The FOR loops. Different time frames (the indexs) are chosen in the loop following the factor that the data is updated at certain times from the Central Weather Bureau</p>
 <p>以上圖為例，0是資料當天，而一週資料就要取[0, 1, 3, 5, 7, 9, 11]。</p>
 <p>以下為判斷方法，當時間為18:00時，資料要取[0, 1, 3, 5, 7, 9, 11]；時間為00:00時要取[1, 3, 5, 7, 9, 11, 13]；其他時間為[0, 2, 4, 6, 8, 10, 12]。其中要注意換天的問題，若氣象局已經更新資料但實際時間還在前一天，那天數就要+1，反之不用。</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211016154-8afb19ab-3e53-47b8-853c-f9c0c8f071f7.png"/>
