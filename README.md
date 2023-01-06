@@ -8,3 +8,5 @@ A teambuilt weather forestcast web
 <img src = "https://user-images.githubusercontent.com/109027415/211013359-5df724bf-e470-409e-9e1d-27675af7bc29.png"/>
 <p>利用for迴圈將各資料取出，並只取第一筆時間資料，最後統整成一個object</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211013060-439250d7-9e4d-4937-be39-deb50a5de761.png"/>
+
+<h3>取得近36小時的天氣資料</h3>
