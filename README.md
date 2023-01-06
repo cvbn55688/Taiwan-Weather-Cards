@@ -19,7 +19,7 @@
 
 <h3>取得近36小時的天氣資料</h3>
 
-  > API:```https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=${key}```
+  > API：```https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=${key}```
   
 - 以下為初始資料:
 
