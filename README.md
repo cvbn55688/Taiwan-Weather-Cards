@@ -1,6 +1,6 @@
 # Taiwan-Weather-Cards
 
-# 資料串接<hr/>
+# 資料串接
 
 <h3>取得當下天氣狀況</h3>
 
