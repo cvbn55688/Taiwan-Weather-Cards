@@ -16,7 +16,7 @@ A teambuilt weather forestcast web
 <p>利用for迴圈將各資料取出，並判斷取得之資料為「今日白天」、「今日晚上」、「今晚明晨」、「明日白天」、「明日晚上」</p>
 <p>將資料內start time取出並判斷是什麼時間點，部分時間會利用new Date()來判斷是今日或明日</p>
 <p>以下為判斷方法</p>
-<img src = https://user-images.githubusercontent.com/109027415/211014592-1479a114-ed4a-4c9f-a23e-d9f1d69e9662.png/>
+<img src = "https://user-images.githubusercontent.com/109027415/211014592-1479a114-ed4a-4c9f-a23e-d9f1d69e9662.png"/>
 <p>最後將資料打包：</p>
-<img src = https://user-images.githubusercontent.com/109027415/211014870-0d2bac54-c852-4546-8dd5-57c154c5996c.png/>
+<img src = "https://user-images.githubusercontent.com/109027415/211014870-0d2bac54-c852-4546-8dd5-57c154c5996c.png"/>
 
