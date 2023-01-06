@@ -148,8 +148,9 @@ function showWeeklyWeather(location) {
 
   for (i = 0; i < 6; i++) {
     const obj = dateobject[i + 1];
-    const startTime = obj.startTime;
-    const date = new Date(startTime);
+    let startTime = obj.startTime;
+    nowTime = startTime.split(" ")[0].split("-");
+    const date = new Date(nowTime[0] + "/" + nowTime[1] + "/" + nowTime[2]);
     const month = date.getMonth() + 1; // months are 0-based
     const day = date.getDate();
     dateSpan[i].textContent = `${month}/${day}`;
