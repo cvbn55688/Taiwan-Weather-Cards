@@ -32,24 +32,18 @@ todayDate.textContent = `${month.slice(1, 2)}/${day}`;
 let weatherData;
 async function getWeatherData() {
   weatherData = await getData();
+  console.log(weatherData);
   navigator.geolocation.getCurrentPosition(
     (position) => {
       const lat = position.coords.latitude;
       const lng = position.coords.longitude;
       async function getLocation() {
         const fetchDate = await fetch(
-          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyAsK9wJr_DVUNY6SR7R4oOIOvuvt2fBIeg`
+          `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyAsK9wJr_DVUNY6SR7R4oOIOvuvt2fBIeg&language=zh-TW`
         );
         const fetchResponse = await fetchDate.json();
         let userLocation;
-        if (navigator.language.slice(0, 2) === "en") {
-          userLocation = fetchResponse.results[4].formatted_address.slice(
-            13,
-            16
-          );
-        } else if (navigator.language.slice(0, 2) === "zh") {
-          userLocation = fetchResponse.results[4].formatted_address.slice(5, 8);
-        }
+        userLocation = fetchResponse.results[4].formatted_address.slice(5, 8);
         if (userLocation.includes("台")) {
           userLocation = userLocation.replace("台", "臺");
         }
