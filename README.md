@@ -9,6 +9,8 @@ A teambuilt weather forestcast web
 <p>利用for迴圈將各資料取出，並只取第一筆時間資料，最後統整成一個object。</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211013060-439250d7-9e4d-4937-be39-deb50a5de761.png"/>
 
+<br/>
+
 <h3>取得近36小時的天氣資料</h3>
 <p>API:https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=${key}</p>
 <p>以下為初始資料:</p>
@@ -20,6 +22,8 @@ A teambuilt weather forestcast web
 <p>最後將資料打包：</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211014870-0d2bac54-c852-4546-8dd5-57c154c5996c.png"/>
 
+<br/>
+
 <h3>取得一週的天氣資料</h3>
 <p>API:"https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=${key}"</p>
 <p>以下為初始資料:</p>
@@ -30,6 +34,8 @@ A teambuilt weather forestcast web
 <img src = "https://user-images.githubusercontent.com/109027415/211016154-8afb19ab-3e53-47b8-853c-f9c0c8f071f7.png"/>
 <p>最後將資料打包，注意這邊我將0設為禮拜天、1為禮拜一...以此類推。</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211016601-8ce2884e-f767-4f7f-a106-7197fc505090.png"/>
+
+<br/>
 
 <h3>取得當天的日落日出時間</h3>
 <p>因為氣象局的日落日出資料已經包含一整年的時間，不需要去管更新問題，所以直接用API控制日期，取今日資料即可。</p>
