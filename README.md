@@ -4,7 +4,7 @@
 
 <h3>取得當下天氣狀況</h3>
 
-  > 呈API:https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=${key}
+  > 呈API:```https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=${key}```
   
 - 以下為初始資料:
 
