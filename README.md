@@ -45,5 +45,7 @@ A teambuilt weather forestcast web
 <p>利用for迴圈將各資料取出，最後打包就好：</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211017873-38cc13d8-e065-495d-ae31-b04b0d61982e.png"/>
 
-<h2>最後將所有資料統整成一個object，提供給前端使用</h2>
+<br/>
+
+<h3>最後將所有資料統整成一個object，提供給前端使用</h2>
 <img src = "https://user-images.githubusercontent.com/109027415/211018084-2449f3d3-0a37-4929-a859-bc7f0b0ea53a.png"/>
