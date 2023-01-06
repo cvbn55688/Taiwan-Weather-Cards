@@ -1,6 +1,5 @@
 # Taiwan-Weather-Cards
 
-
 <h1>資料串接</h1>
 <h3>取得當下天氣狀況</h3>
 <p>API:https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=${key}</p>
@@ -50,7 +49,7 @@
 <h3>最後將所有資料統整成一個object，提供給前端使用</h2>
 <img src = "https://user-images.githubusercontent.com/109027415/211018084-2449f3d3-0a37-4929-a859-bc7f0b0ea53a.png"/>
 
-# 功能說明<hr/>
+# 功能說明
 
 - 點擊互動效果
 
@@ -79,12 +78,12 @@
   ![](image/sunsetSunrise.png)
 
 - 一周天氣預測
+
   > 呈現當前所在縣市或所選擇縣市自當前日期往後一周之天氣情形。其中包含星期、日期、天氣狀況（晴、陰、多雲、有雨...等）、溫度、風速。
-  > ![](image/weeklyWeather.png)
+
+  ![](image/weeklyWeather.png)
 
 # 組員分工
-
-<hr/>
 
 - 版面刻劃
 
@@ -98,4 +97,3 @@
 - 網頁事件互動
 
   > 蘇子傑、林玟均
-
