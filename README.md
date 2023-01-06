@@ -10,3 +10,5 @@ A teambuilt weather forestcast web
 <img src = "https://user-images.githubusercontent.com/109027415/211013060-439250d7-9e4d-4937-be39-deb50a5de761.png"/>
 
 <h3>取得近36小時的天氣資料</h3>
+<p>API:https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=${key}</p>
+![image](https://user-images.githubusercontent.com/109027415/211013678-4bd31d3a-988f-4898-a1d4-3dbe350399bf.png)
