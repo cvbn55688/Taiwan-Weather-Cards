@@ -32,9 +32,12 @@ A teambuilt weather forestcast web
 <img src = "https://user-images.githubusercontent.com/109027415/211016601-8ce2884e-f767-4f7f-a106-7197fc505090.png"/>
 
 <h3>取得當天的日落日出時間</h3>
-<p>因為氣象局的日落日出資料已經包含一整年的時間，不需要去管更新問題，所以直接用API控制日期，取今日資料即可</p>
+<p>因為氣象局的日落日出資料已經包含一整年的時間，不需要去管更新問題，所以直接用API控制日期，取今日資料即可。</p>
 <p>API:"https://opendata.cwb.gov.tw/api/v1/rest/datastore/A-B0062-001?Authorization=${key}&timeFrom=${nowDate}&timeTo=${nextDate}"</p>
 <p>以下為初始資料:</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211017763-67b57ef7-b2f3-49cc-8fa3-515822fd5d11.png"/>
 <p>利用for迴圈將各資料取出，最後打包就好：</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211017873-38cc13d8-e065-495d-ae31-b04b0d61982e.png"/>
+
+<h2>最後將所有資料統整成一個object，提供給前端使用</h2>
+<img src = "https://user-images.githubusercontent.com/109027415/211018084-2449f3d3-0a37-4929-a859-bc7f0b0ea53a.png"/>
