@@ -1,5 +1,13 @@
 # Taiwan-Weather-Cards
 
+# 響應式設計呈現
+
+![](https://github.com/wanhsuan625/Taiwan-Weather-Cards/blob/develop/image/team%2014-Taiwan%20Weather%20Card.gif)
+
+- RWD 中斷點： 1200px、1024px、768px 以及 480px
+
+  > 可配合多款不同裝置來顯示畫面。在768px的介面之下，將畫面分割為上、下兩部分呈現。
+
 <h1>資料串接</h1>
 <h3>取得當下天氣狀況</h3>
 <p>API:https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=${key}</p>
