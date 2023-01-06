@@ -155,10 +155,15 @@ function showWeeklyWeather(location) {
     const day = date.getDate();
     dateSpan[i].textContent = `${month}/${day}`;
   }
-
   dateSpan[6].textContent = `${
     date.getMonth(new Date(dateobject[0].startTime)) + 1
-  }/${new Date(dateobject[0].startTime).getDate()}`;
+  }/${new Date(
+    dateobject[0].startTime.split(" ")[0].split("-")[0] +
+      "/" +
+      dateobject[0].startTime.split(" ")[0].split("-")[1] +
+      "/" +
+      dateobject[0].startTime.split(" ")[0].split("-")[2]
+  ).getDate()}`;
 
   const WeekforUserLoc = weatherData.allWeatherData["一週預報"][location].data;
 
