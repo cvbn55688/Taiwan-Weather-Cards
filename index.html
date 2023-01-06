@@ -19,11 +19,11 @@
 
   <body>
     <header class="header">
-      <nav>
-        <a href="index.html">
-          <img class="nav_logo" src="image/logo.png" alt=""
-          ><span class="nav_title">Taiwan Weather Card</span>
-        </a>
+      <nav class="nav">
+        <img class="nav_logo" src="image/logo.png" alt="">
+        <div>
+          <a href="index.html" class="nav_title">Taiwan Weather Card</a>
+        </div>
       </nav>
     </header>
 
@@ -746,8 +746,25 @@
       <!-- // 台灣地圖 -->
     </div>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer_title">COPYRIGHT © 2023 臺灣天氣預測</div>
+      <div class="footer_content">蘇子傑、林玟均、郭宸瑋、何致翰、詹宛璇</div>
+      <div class="footer_content">
+        資料來源：
+        <a class="footer_link"
+           target="_blank"
+           href="https://www.cwb.gov.tw/V8/C/">中華民國交通部中央氣象局
+        </a>
+      </div>
+
+    </footer>
+    <!-- // FOOTER -->
+
+    <!-- 背景 -->
     <img class="cloud" src="https://www.cwb.gov.tw/V8/assets/img/home/jumbotron_cloud_pattern_l1.png" alt="">
     <img class="cloud bottom_cloud" src="https://www.cwb.gov.tw/V8/assets/img/home/jumbotron_cloud_pattern_l2.png" alt="">
+    <!-- // 背景 -->
 
     <script src="js/getData.js"></script>
     <script src="js/eventControl.js"></script>
