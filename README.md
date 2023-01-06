@@ -4,7 +4,7 @@
 
 <h3>取得當下天氣狀況</h3>
 
-  > 呈API:```https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=${key}```
+  > API：```https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=${key}```
   
 - 以下為初始資料:
 
@@ -19,7 +19,7 @@
 
 <h3>取得近36小時的天氣資料</h3>
 
-  > API:https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=${key}</p>
+  > API:```https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=${key}```
   
 - 以下為初始資料:
 
@@ -40,7 +40,7 @@
 
 <h3>取得一週的天氣資料</h3>
 
-  > API:"https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=${key}"
+  > API：```https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=${key}```
   
 - 以下為初始資料:
 
@@ -66,7 +66,7 @@
 <h3>取得當天的日落日出時間</h3>
 
   >因為氣象局的日落日出資料已經包含一整年的時間，不需要去管更新問題，所以直接用API控制日期，取今日資料即可。
-  >API:"https://opendata.cwb.gov.tw/api/v1/rest/datastore/A-B0062-001?Authorization=${key}&timeFrom=${nowDate}&timeTo=${nextDate}"
+  >API：```https://opendata.cwb.gov.tw/api/v1/rest/datastore/A-B0062-001?Authorization=${key}&timeFrom=${nowDate}&timeTo=${nextDate}```
 
 - 以下為初始資料:
 
