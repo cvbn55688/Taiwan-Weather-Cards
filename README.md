@@ -24,11 +24,10 @@ A teambuilt weather forestcast web
 <p>API:"https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=${key}"</p>
 <p>以下為初始資料:</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211015439-c470c859-ce8c-4e93-b56c-bc8d769f9d9d.png"/>
-<p>利用for迴圈將各資料取出，因為氣象局會隨時間更新資料，所以要在更新時更換要取的時間，
-才能正確取得資料</p>
-<p>將資料內start time取出並判斷是什麼時間點，部分時間會利用new Date()來判斷是今日或明日</p>
-<p>以下為判斷方法</p>
-<img src = "https://user-images.githubusercontent.com/109027415/211014592-1479a114-ed4a-4c9f-a23e-d9f1d69e9662.png"/>
-<p>最後將資料打包：</p>
-<img src = "https://user-images.githubusercontent.com/109027415/211014870-0d2bac54-c852-4546-8dd5-57c154c5996c.png"/>
+<p>利用for迴圈將各資料取出，因為氣象局會隨時間更新資料，所以要在更新時更換要取的時間，才能正確取得資料</p>
+<p>以上圖為例，0是資料當天，而一週資料就要取[0, 1, 3, 5, 7, 9, 11]</p>
+<p>以下為判斷方法，當時間為18:00時，資料要取[0, 1, 3, 5, 7, 9, 11]；時間為00:00時要取[1, 3, 5, 7, 9, 11, 13]；其他時間為[0, 2, 4, 6, 8, 10, 12]。其中要注意換天的問題，若氣象局已經更新資料但實際時間還在前一天，那天數就要+1，反之不用</p>
+<img src = "https://user-images.githubusercontent.com/109027415/211016154-8afb19ab-3e53-47b8-853c-f9c0c8f071f7.png"/>
+<p>最後將資料打包，注意</p>
+<img src = "https://user-images.githubusercontent.com/109027415/211016601-8ce2884e-f767-4f7f-a106-7197fc505090.png"/>
 
