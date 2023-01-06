@@ -33,6 +33,7 @@ const imageBaseUrl = `https://www.cwb.gov.tw/V8/assets/img/weather_icons/weather
 const hoursBox = document.querySelectorAll(".hours_box");
 const defaultLocation = "臺北市";
 const weekContainer = document.querySelector(".week_container");
+const positionIcon = document.querySelector("#position");
 
 todayDate.textContent = `${month.slice(1, 2)}/${day}`;
 
@@ -83,6 +84,9 @@ city.forEach((element) => {
     show36hrWeather(cityNameData);
     showSunTime(cityNameData);
     showWeeklyWeather(cityNameData);
+    let clickGid = element.id;
+    positionIcon.attributes.transform.nodeValue = `translate(${gPosition[clickGid]})`;
+    positionIcon.style.display = "flex";
   });
 });
 
@@ -253,3 +257,28 @@ while (weekContainer.childElementCount != 7) {
     weekCount++;
   }
 }
+
+var gPosition = {
+  C10017: "310 30",
+  C65: "280 65",
+  C63: "288 30",
+  C68: "240 55",
+  C10004: "235 95",
+  C10018: "210 80",
+  C10005: "210 130",
+  C66: "180 170",
+  C10008: "220 200",
+  C10007: "150 210",
+  C10009: "130 235",
+  C10010: "170 265",
+  C10020: "142 265",
+  C67: "130 320",
+  C64: "130 380",
+  C10013: "170 420",
+  C10014: "225 350",
+  C10015: "275 220",
+  C10002: "300 115",
+  C09007: "20 80",
+  C09020: "20 150",
+  C10016: "15 250",
+};

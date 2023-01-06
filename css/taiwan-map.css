@@ -13,7 +13,10 @@ a:hover {
 a:active {
   text-decoration: none;
 }
-
+#default_map #position .icon-in path {
+  fill: #010840 !important;
+  stroke: none !important;
+}
 /* 台灣地圖 */
 .taiwan_map {
   position: relative;

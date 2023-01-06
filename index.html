@@ -20,7 +20,7 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <img class="nav_logo" src="image/logo.png" alt="">
+        <img class="nav_logo" src="image/logo.png" alt="" />
         <div>
           <a href="index.html" class="nav_title">Taiwan Weather Card</a>
         </div>
@@ -28,7 +28,6 @@
     </header>
 
     <div class="wrapper">
-
       <!-- WEATHER CARDS -->
       <div class="card_container">
         <!-- 按鈕 -->
@@ -43,7 +42,7 @@
           <!-- 城市、日期 -->
           <h1 class="today_city" id="city"></h1>
           <div class="today_calendar_box">
-            <img class="today_calendar" src="image/calendar.png" alt="">
+            <img class="today_calendar" src="image/calendar.png" alt="" />
             <span class="today_date" id="date"></span>
           </div>
 
@@ -57,7 +56,11 @@
             <!-- 溫度、風速、降雨機率、日出、日落 -->
             <div class="today_detail_box">
               <div class="today_temperature_box">
-                <img class="temperature_icon" src="image/temperature.png" alt="" />
+                <img
+                  class="temperature_icon"
+                  src="image/temperature.png"
+                  alt=""
+                />
                 <span class="today_temperature" id="today_temperature"></span>
               </div>
 
@@ -70,7 +73,7 @@
                 <div class="today_rain_box">
                   <img class="today_icon" src="image/umbrella.png" alt="" />
                   <span class="today_rain" id="today_rain"></span>
-                </diV>
+                </div>
               </div>
 
               <div class="bottom_box">
@@ -85,7 +88,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         <!-- // 今日天氣狀況 -->
@@ -96,18 +98,18 @@
           <div class="hours_box" id="first_box">
             <div class="hours_title" id="first_title"></div>
             <div class="hours_bottom_box">
-               <img class="hours_image" id="first_image" alt="" />
-               <div class="hours_detail_box">
-                  <span class="hours_temperature" id="first_temperature"></span>
-                  <div class="hours_rain_box">
-                     <img
-                        class="hours_icon"
-                        src="image/umbrella-white.png"
-                        alt=""
-                     />
-                     <span class="hours_rain" id="first_rain"></span>
-                  </div>
-               </div>
+              <img class="hours_image" id="first_image" alt="" />
+              <div class="hours_detail_box">
+                <span class="hours_temperature" id="first_temperature"></span>
+                <div class="hours_rain_box">
+                  <img
+                    class="hours_icon"
+                    src="image/umbrella-white.png"
+                    alt=""
+                  />
+                  <span class="hours_rain" id="first_rain"></span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -115,18 +117,18 @@
           <div class="hours_box" id="second_box">
             <div class="hours_title" id="second_title"></div>
             <div class="hours_bottom_box">
-               <img class="hours_image" id="second_image" alt="" />
-               <div class="hours_detail_box">
-                  <span class="hours_temperature" id="second_temperature"></span>
-                  <div class="hours_rain_box">
-                     <img
-                        class="hours_icon"
-                        src="image/umbrella-white.png"
-                        alt=""
-                     />
-                     <span class="hours_rain" id="second_rain"></span>
-                  </div>
-               </div>
+              <img class="hours_image" id="second_image" alt="" />
+              <div class="hours_detail_box">
+                <span class="hours_temperature" id="second_temperature"></span>
+                <div class="hours_rain_box">
+                  <img
+                    class="hours_icon"
+                    src="image/umbrella-white.png"
+                    alt=""
+                  />
+                  <span class="hours_rain" id="second_rain"></span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -134,18 +136,18 @@
           <div class="hours_box" id="third_box">
             <div class="hours_title" id="third_title"></div>
             <div class="hours_bottom_box">
-               <img class="hours_image" id="third_image" alt="" />
-               <div class="hours_detail_box">
-                  <span class="hours_temperature" id="third_temperature"></span>
-                  <div class="hours_rain_box">
-                     <img
-                        class="hours_icon"
-                        src="image/umbrella-white.png"
-                        alt=""
-                     />
-                     <span class="hours_rain" id="third_rain"></span>
-                  </div>
-               </div>
+              <img class="hours_image" id="third_image" alt="" />
+              <div class="hours_detail_box">
+                <span class="hours_temperature" id="third_temperature"></span>
+                <div class="hours_rain_box">
+                  <img
+                    class="hours_icon"
+                    src="image/umbrella-white.png"
+                    alt=""
+                  />
+                  <span class="hours_rain" id="third_rain"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -246,70 +248,115 @@
       <div class="taiwan_container" style="width: 58%">
         <div class="taiwan_map">
           <div class="nametag">
-            <div class="nametag_box keelung_city_nametag" style="display: none;">
+            <div class="nametag_box keelung_city_nametag" style="display: none">
               <span class="city_nametag">基隆市</span>
             </div>
-            <div class="nametag_box new_taipei_city_nametag" style="display: none;">
+            <div
+              class="nametag_box new_taipei_city_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">新北市</span>
             </div>
-            <div class="nametag_box taipei_city_nametag" style="display: none;">
+            <div class="nametag_box taipei_city_nametag" style="display: none">
               <span class="city_nametag">臺北市</span>
             </div>
-            <div class="nametag_box taoyuan_city_nametag" style="display: none;">
+            <div class="nametag_box taoyuan_city_nametag" style="display: none">
               <span class="city_nametag">桃園市</span>
             </div>
-            <div class="nametag_box hsinchu_county_nametag" style="display: none;">
+            <div
+              class="nametag_box hsinchu_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">新竹縣</span>
             </div>
-            <div class="nametag_box hsinchu_city_nametag" style="display: none;">
+            <div class="nametag_box hsinchu_city_nametag" style="display: none">
               <span class="city_nametag">新竹市</span>
             </div>
-            <div class="nametag_box miaoli_county_nametag" style="display: none;">
+            <div
+              class="nametag_box miaoli_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">苗栗縣</span>
             </div>
-            <div class="nametag_box taichung_city_nametag" style="display: none;">
+            <div
+              class="nametag_box taichung_city_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">臺中市</span>
             </div>
-            <div class="nametag_box nantou_county_nametag" style="display: none;">
+            <div
+              class="nametag_box nantou_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">南投縣</span>
             </div>
-            <div class="nametag_box changhua_county_nametag" style="display: none;">
+            <div
+              class="nametag_box changhua_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">彰化縣</span>
             </div>
-            <div class="nametag_box yunlin_county_nametag" style="display: none;">
+            <div
+              class="nametag_box yunlin_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">雲林縣</span>
             </div>
-            <div class="nametag_box chiayi_county_nametag" style="display: none;">
+            <div
+              class="nametag_box chiayi_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">嘉義縣</span>
             </div>
-            <div class="nametag_box chiayi_city_nametag" style="display: none;">
+            <div class="nametag_box chiayi_city_nametag" style="display: none">
               <span class="city_nametag">嘉義市</span>
             </div>
-            <div class="nametag_box tainan_city_nametag" style="display: none;">
+            <div class="nametag_box tainan_city_nametag" style="display: none">
               <span class="city_nametag">臺南市</span>
             </div>
-            <div class="nametag_box kaohsiung_city_nametag" style="display: none;">
+            <div
+              class="nametag_box kaohsiung_city_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">高雄市</span>
             </div>
-            <div class="nametag_box pingtung_county_nametag" style="display: none;">
+            <div
+              class="nametag_box pingtung_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">屏東縣</span>
             </div>
-            <div class="nametag_box taitung_county_nametag" style="display: none;">
+            <div
+              class="nametag_box taitung_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">臺東縣</span>
             </div>
-            <div class="nametag_box hualien_county_nametag" style="display: none;">
+            <div
+              class="nametag_box hualien_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">花蓮縣</span>
             </div>
-            <div class="nametag_box yilan_county_nametag" style="display: none;">
+            <div class="nametag_box yilan_county_nametag" style="display: none">
               <span class="city_nametag">宜蘭縣</span>
             </div>
-            <div class="nametag_box penghu_county_nametag" style="display: none;">
+            <div
+              class="nametag_box penghu_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">澎湖縣</span>
             </div>
-            <div class="nametag_box kinmen_county_nametag" style="display: none;">
+            <div
+              class="nametag_box kinmen_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">金門縣</span>
             </div>
-            <div class="nametag_box lianjiang_county_nametag" style="display: none;">
+            <div
+              class="nametag_box lianjiang_county_nametag"
+              style="display: none"
+            >
               <span class="city_nametag">連江縣</span>
             </div>
           </div>
@@ -739,6 +786,30 @@
                   ></path>
                 </g>
               </a>
+              <g
+                id="position"
+                transform="translate(220 200)"
+                style="display: none"
+              >
+                <g class="icon-in">
+                  <desc>座標圖示</desc>
+                  <path
+                    d="M16,0C9.4,0,4.1,5.3,4.1,11.9S16,32,16,32s11.9-13.5,11.9-20.1C27.9,5.3,22.6,0,16,0z M16,18.7c-3.7,0-6.8-3-6.8-6.8
+            s3-6.8,6.8-6.8s6.8,3,6.8,6.8S19.7,18.7,16,18.7z"
+                    style="
+                      stroke-dasharray: 127.518, 127.518;
+                      stroke-dashoffset: 0;
+                    "
+                  ></path>
+                  <path
+                    d="M20.1,11.9c0,2.2-1.8,4.1-4.1,4.1s-4.1-1.8-4.1-4.1c0-2.2,1.8-4.1,4.1-4.1S20.1,9.7,20.1,11.9z"
+                    style="
+                      stroke-dasharray: 25.7618, 25.7618;
+                      stroke-dashoffset: 0;
+                    "
+                  ></path>
+                </g>
+              </g>
             </svg>
           </div>
         </div>
@@ -752,18 +823,27 @@
       <div class="footer_content">蘇子傑、林玟均、郭宸瑋、何致翰、詹宛璇</div>
       <div class="footer_content">
         資料來源：
-        <a class="footer_link"
-           target="_blank"
-           href="https://www.cwb.gov.tw/V8/C/">中華民國交通部中央氣象局
+        <a
+          class="footer_link"
+          target="_blank"
+          href="https://www.cwb.gov.tw/V8/C/"
+          >中華民國交通部中央氣象局
         </a>
       </div>
-
     </footer>
     <!-- // FOOTER -->
 
     <!-- 背景 -->
-    <img class="cloud" src="https://www.cwb.gov.tw/V8/assets/img/home/jumbotron_cloud_pattern_l1.png" alt="">
-    <img class="cloud bottom_cloud" src="https://www.cwb.gov.tw/V8/assets/img/home/jumbotron_cloud_pattern_l2.png" alt="">
+    <img
+      class="cloud"
+      src="https://www.cwb.gov.tw/V8/assets/img/home/jumbotron_cloud_pattern_l1.png"
+      alt=""
+    />
+    <img
+      class="cloud bottom_cloud"
+      src="https://www.cwb.gov.tw/V8/assets/img/home/jumbotron_cloud_pattern_l2.png"
+      alt=""
+    />
     <!-- // 背景 -->
 
     <script src="js/getData.js"></script>
