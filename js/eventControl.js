@@ -26,6 +26,7 @@ const imageBaseUrl =
   "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/";
 const hoursBox = document.querySelectorAll(".hours_box");
 const defaultLocation = "臺北市";
+const weekContainer = document.querySelector(".week_container");
 
 todayDate.textContent = `${month.slice(1, 2)}/${day}`;
 
@@ -222,4 +223,23 @@ function showWeeklyWeather(location) {
   windSpan[4].textContent = parseInt(winddata[5].WS.match(/\d+/)[0], 10);
   windSpan[5].textContent = parseInt(winddata[6].WS.match(/\d+/)[0], 10);
   windSpan[6].textContent = parseInt(winddata[0].WS.match(/\d+/)[0], 10);
+}
+
+const week_box = document.querySelectorAll(".week_box");
+
+week_box.forEach((element) => {
+  element.remove();
+});
+let weekCount = date.getDay();
+while (weekContainer.childElementCount != 7) {
+  if (weekCount == 0) {
+    weekContainer.appendChild(week_box[6]);
+  } else {
+    weekContainer.appendChild(week_box[weekCount - 1]);
+  }
+  if (weekCount == 6) {
+    weekCount = 0;
+  } else {
+    weekCount++;
+  }
 }
