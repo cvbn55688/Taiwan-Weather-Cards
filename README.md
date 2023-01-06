@@ -1,5 +1,13 @@
 # Taiwan-Weather-Cards
 
+# 響應式設計呈現
+
+![](https://github.com/wanhsuan625/Taiwan-Weather-Cards/blob/develop/image/team%2014-Taiwan%20Weather%20Card.gif)
+
+- RWD 中斷點： 1200px、1024px、768px 以及 480px
+
+  > 可配合多款不同裝置來顯示畫面。在768px的介面之下，將畫面分割為上、下兩部分呈現。
+
 # 資料串接
 
 <h3>取得當下天氣狀況</h3>
@@ -52,7 +60,7 @@
 - 下圖為判斷方法
 
   > 當時間為18:00時，資料要取[0, 1, 3, 5, 7, 9, 11]；時間為00:00時要取[1, 3, 5, 7, 9, 11, 13]；其他時間為[0, 2, 4, 6, 8, 10, 12]。其中要注意換天的問題，若氣象局已經更新資料但實際時間還在前一天，那天數就要+1，反之不用。
- 
+
 <img src = "https://user-images.githubusercontent.com/109027415/211016154-8afb19ab-3e53-47b8-853c-f9c0c8f071f7.png"/>
 
 
@@ -81,7 +89,7 @@
 <h3>最後將所有資料統整成一個object，提供給前端使用</h3>
 <img src = "https://user-images.githubusercontent.com/109027415/211018084-2449f3d3-0a37-4929-a859-bc7f0b0ea53a.png"/>
 
-# 功能說明<hr/>
+# 功能說明
 
 - 點擊互動效果
 
@@ -110,12 +118,12 @@
   ![](image/sunsetSunrise.png)
 
 - 一周天氣預測
+
   > 呈現當前所在縣市或所選擇縣市自當前日期往後一周之天氣情形。其中包含星期、日期、天氣狀況（晴、陰、多雲、有雨...等）、溫度、風速。
-  > ![](image/weeklyWeather.png)
+
+  ![](image/weeklyWeather.png)
 
 # 組員分工
-
-<hr/>
 
 - 版面刻劃
 
@@ -129,4 +137,3 @@
 - 網頁事件互動
 
   > 蘇子傑、林玟均
-
