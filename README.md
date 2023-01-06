@@ -20,3 +20,15 @@ A teambuilt weather forestcast web
 <p>最後將資料打包：</p>
 <img src = "https://user-images.githubusercontent.com/109027415/211014870-0d2bac54-c852-4546-8dd5-57c154c5996c.png"/>
 
+<h3>取得一週的天氣資料</h3>
+<p>API:"https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=${key}"</p>
+<p>以下為初始資料:</p>
+<img src = "https://user-images.githubusercontent.com/109027415/211015439-c470c859-ce8c-4e93-b56c-bc8d769f9d9d.png"/>
+<p>利用for迴圈將各資料取出，因為氣象局會隨時間更新資料，所以要在更新時更換要取的時間，
+才能正確取得資料</p>
+<p>將資料內start time取出並判斷是什麼時間點，部分時間會利用new Date()來判斷是今日或明日</p>
+<p>以下為判斷方法</p>
+<img src = "https://user-images.githubusercontent.com/109027415/211014592-1479a114-ed4a-4c9f-a23e-d9f1d69e9662.png"/>
+<p>最後將資料打包：</p>
+<img src = "https://user-images.githubusercontent.com/109027415/211014870-0d2bac54-c852-4546-8dd5-57c154c5996c.png"/>
+
