@@ -63,7 +63,7 @@ a:active {
   stroke-dashoffset: 0 !important;
 }
 #default_map svg path:hover {
-  fill: rgba(255, 255, 255, 0.4);
+  fill: rgba(255, 255, 255, 0);
 }
 .map_theme g,
 .map_theme path {
