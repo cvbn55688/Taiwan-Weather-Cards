@@ -168,7 +168,11 @@ function getWeekData() {
           locations[0].weatherElement[0].time[0].startTime.substr(0, 10) !=
           nowDate
         ) {
-          whatDay = whatDay + 1;
+          if (whatDay == 6) {
+            whatDay = 0;
+          } else {
+            whatDay = whatDay + 1;
+          }
         }
       } else {
         count = [0, 2, 4, 6, 8, 10, 12];
