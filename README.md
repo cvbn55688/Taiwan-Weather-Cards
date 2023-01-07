@@ -101,7 +101,7 @@
 
 - 使用者位置
 
-  > 使用 Javascript 原生函式`navigator.geolocation.getCurrentPosition()`取得使用者當前地理位置之**經緯度**，並透過 Google Maps API 轉換為台灣縣市後串接縣市資料並呈現於網頁上。<br/>註：若使用者拒絕存取當前地理位置，則呈現預設縣市【台北市】之天氣資料。
+  > 使用 Geolocation API 取得使用者當前地理位置之**經緯度**，並透過 Google Maps API 轉換為台灣縣市後串接縣市資料呈現於網頁上。<br/>註：若使用者拒絕存取當前地理位置，則呈現預設縣市【台北市】之天氣資料。
 
 - 現在天氣
 
