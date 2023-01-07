@@ -50,8 +50,13 @@ async function getWeatherData() {
           `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyAsK9wJr_DVUNY6SR7R4oOIOvuvt2fBIeg&language=zh-TW`
         );
         const fetchResponse = await fetchDate.json();
+        const taiwanIndex =
+          fetchResponse.plus_code.compound_code.indexOf("台灣");
         let userLocation;
-        userLocation = fetchResponse.results[4].formatted_address.slice(5, 8);
+        userLocation = fetchResponse.plus_code.compound_code.slice(
+          taiwanIndex + 2,
+          taiwanIndex + 5
+        );
         if (userLocation.includes("台")) {
           userLocation = userLocation.replace("台", "臺");
         }
