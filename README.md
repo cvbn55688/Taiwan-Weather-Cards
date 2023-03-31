@@ -56,6 +56,7 @@ The website has two sections: weather cards and a map of Taiwan. Users can click
 
 - 最後將資料打包 Packing data：
 
+
 <img src = "https://user-images.githubusercontent.com/109027415/211014870-0d2bac54-c852-4546-8dd5-57c154c5996c.png"/>
 
 <br/>
@@ -84,6 +85,7 @@ The website has two sections: weather cards and a map of Taiwan. Users can click
 - 最後將資料打包，注意這邊我將 0 設為禮拜天、1 為禮拜一...以此類推。
   <br><br>Finally, the data is packaged, and note that '0' is set as Sunday, '1' as Monday, and so on.
 
+
 <img src = "https://user-images.githubusercontent.com/109027415/211016601-8ce2884e-f767-4f7f-a106-7197fc505090.png"/>
 
 <br/>
@@ -100,6 +102,7 @@ The website has two sections: weather cards and a map of Taiwan. Users can click
 
 - 利用 for 迴圈將各資料取出，最後打包就好
   <br><br>Extracting each piece of data using "for loops", and finally packaging them together.：
+
 
 <img src = "https://user-images.githubusercontent.com/109027415/211017873-38cc13d8-e065-495d-ae31-b04b0d61982e.png"/>
 
@@ -164,3 +167,4 @@ The website has two sections: weather cards and a map of Taiwan. Users can click
 - 網頁事件互動 Webpage Interactive Events
 
   > <a href="https://github.com/Jacky-stc">蘇子傑 Tzu-Chieh Su</a>、<a href="https://github.com/vivian-wj-lin">林玟均 Vivian Lin</a>
+
