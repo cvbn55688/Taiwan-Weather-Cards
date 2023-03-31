@@ -168,7 +168,11 @@ function getWeekData() {
           locations[0].weatherElement[0].time[0].startTime.substr(0, 10) !=
           nowDate
         ) {
-          whatDay = whatDay + 1;
+          if (whatDay == 6) {
+            whatDay = 0;
+          } else {
+            whatDay = whatDay + 1;
+          }
         }
       } else {
         count = [0, 2, 4, 6, 8, 10, 12];
@@ -235,11 +239,10 @@ function getSunData() {
     .then(function (data) {
       let locations = data.records.locations.location;
       sunTimeData = {};
-      // console.log(locations);
       locations.forEach((location) => {
-        let locationName = location.locationName;
-        let sunriseTime = location.time[0].parameter[1].parameterValue;
-        let sunsetTime = location.time[0].parameter[5].parameterValue;
+        let locationName = location.CountyName;
+        let sunriseTime = location.time[0].SunRiseTime;
+        let sunsetTime = location.time[0].SunSetTime;
         data = {
           [locationName]: {
             locationName: locationName,
